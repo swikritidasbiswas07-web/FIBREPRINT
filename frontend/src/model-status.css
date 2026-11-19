@@ -1,0 +1,11 @@
+/* v0.13 — deliberately compact model-readiness records. */
+.fp-model-readiness{display:grid;grid-template-columns:2fr 1fr;gap:0;margin:18px 0;border:1px solid #9cb2ae;background:#e0e9e4;color:#1a454e}
+.fp-model-readiness>div{padding:17px 20px}
+.fp-model-readiness>div+div{border-left:1px solid #afc0bb}
+.fp-model-readiness span{display:block;font:700 10px/1.5 Montserrat,Lato,sans-serif;letter-spacing:.11em}
+.fp-model-readiness strong{display:block;font:700 25px/1.1 'League Spartan',Lato,sans-serif;margin:8px 0}
+.fp-model-readiness p{font:400 13px/1.5 Lato,sans-serif;margin:0;color:#506963}
+.fp-model-metrics,.fp-model-result{display:grid;gap:5px;margin:13px 0;border-left:4px solid #357c86;padding:12px 15px;background:#e4ece7;font:400 13px/1.5 Lato,sans-serif}
+.fp-model-metrics strong,.fp-model-result strong{font:700 20px/1.1 'League Spartan',Lato,sans-serif;color:#174c58}
+.fp-model-metrics small,.fp-model-result span{font-size:12px;color:#54706c}
+@media(max-width:660px){.fp-model-readiness{grid-template-columns:1fr}.fp-model-readiness>div+div{border-left:0;border-top:1px solid #afc0bb}}

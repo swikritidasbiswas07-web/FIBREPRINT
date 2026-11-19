@@ -1,0 +1,204 @@
+{
+  "status": "RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "check": "EXPLORATORY_RESIDUAL_BAND_DIAGNOSTIC_NOT_CONFORMAL",
+  "created_utc": "2026-11-18T18:22:08.417977+00:00",
+  "input_rows": 155,
+  "distinct_fabrics": 37,
+  "model": "v0.17 Ridge + description keywords; existing fabric-grouped OOF predictions",
+  "nominal_residual_quantile": 0.9,
+  "method": "For each fabric, take residual quantile from other fabrics; evaluate on existing OOF predictions. No refitting.",
+  "overall": {
+    "n_observations": 155,
+    "n_fabrics": 37,
+    "ridge_mae_mg_per_kg": 81.04533044799983,
+    "rf_mae_mg_per_kg": 94.94953597202137,
+    "ridge_mean_signed_error_observed_minus_predicted": 35.896142395703514,
+    "ridge_underpredicted_fraction": 0.49032258064516127,
+    "global_band": {
+      "n": 155,
+      "distinct_fabrics": 37,
+      "empirical_global_band_coverage_fraction": 0.8903225806451613,
+      "median_global_band_half_width_mg_per_kg": 228.05774592337812,
+      "ridge_mae_mg_per_kg": 81.04533044799983,
+      "underpredicted_fraction": 0.49032258064516127
+    }
+  },
+  "by_wash": {
+    "1": {
+      "n": 22,
+      "distinct_fabrics": 22,
+      "empirical_global_band_coverage_fraction": 0.7727272727272727,
+      "median_global_band_half_width_mg_per_kg": 228.05774592337812,
+      "ridge_mae_mg_per_kg": 127.15753880407883,
+      "underpredicted_fraction": 0.6363636363636364
+    },
+    "2": {
+      "n": 22,
+      "distinct_fabrics": 22,
+      "empirical_global_band_coverage_fraction": 0.8636363636363636,
+      "median_global_band_half_width_mg_per_kg": 228.05774592337812,
+      "ridge_mae_mg_per_kg": 112.0062625158147,
+      "underpredicted_fraction": 0.4090909090909091
+    },
+    "3": {
+      "n": 37,
+      "distinct_fabrics": 37,
+      "empirical_global_band_coverage_fraction": 0.918918918918919,
+      "median_global_band_half_width_mg_per_kg": 227.71310094921137,
+      "ridge_mae_mg_per_kg": 78.5648538835912,
+      "underpredicted_fraction": 0.43243243243243246
+    },
+    "4": {
+      "n": 37,
+      "distinct_fabrics": 37,
+      "empirical_global_band_coverage_fraction": 0.918918918918919,
+      "median_global_band_half_width_mg_per_kg": 227.71310094921137,
+      "ridge_mae_mg_per_kg": 65.07461112356346,
+      "underpredicted_fraction": 0.4594594594594595
+    },
+    "5": {
+      "n": 37,
+      "distinct_fabrics": 37,
+      "empirical_global_band_coverage_fraction": 0.918918918918919,
+      "median_global_band_half_width_mg_per_kg": 227.71310094921137,
+      "ridge_mae_mg_per_kg": 53.66925365236746,
+      "underpredicted_fraction": 0.5405405405405406
+    }
+  },
+  "by_observed_release_level_posthoc_only": {
+    "below_100": {
+      "n": 74,
+      "distinct_fabrics": 24,
+      "empirical_global_band_coverage_fraction": 1.0,
+      "median_global_band_half_width_mg_per_kg": 227.88542343629473,
+      "ridge_mae_mg_per_kg": 24.00569604059159,
+      "underpredicted_fraction": 0.36486486486486486
+    },
+    "100_to_below_400": {
+      "n": 67,
+      "distinct_fabrics": 19,
+      "empirical_global_band_coverage_fraction": 0.9402985074626866,
+      "median_global_band_half_width_mg_per_kg": 228.05774592337812,
+      "ridge_mae_mg_per_kg": 78.19210209129037,
+      "underpredicted_fraction": 0.5223880597014925
+    },
+    "at_least_400": {
+      "n": 14,
+      "distinct_fabrics": 5,
+      "empirical_global_band_coverage_fraction": 0.07142857142857142,
+      "median_global_band_half_width_mg_per_kg": 190.81875885769102,
+      "ridge_mae_mg_per_kg": 396.19527659426734,
+      "underpredicted_fraction": 1.0
+    }
+  },
+  "high_release_failure": {
+    "threshold_mg_per_kg": 400,
+    "observations": 14,
+    "underpredicted_count": 14,
+    "out_of_band_count": 13,
+    "critical_note": "Threshold uses observed target; cannot be used at inference time."
+  },
+  "worst_fabrics_by_empirical_band_coverage": [
+    {
+      "fabric_id": "vassilenko_row_21",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 0.0,
+      "median_global_band_half_width_mg_per_kg": 187.0865835369577,
+      "ridge_mae_mg_per_kg": 483.88786396852674,
+      "underpredicted_fraction": 1.0
+    },
+    {
+      "fabric_id": "vassilenko_row_13",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 0.0,
+      "median_global_band_half_width_mg_per_kg": 187.0865835369577,
+      "ridge_mae_mg_per_kg": 280.5076123428165,
+      "underpredicted_fraction": 1.0
+    },
+    {
+      "fabric_id": "vassilenko_row_12",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 0.2,
+      "median_global_band_half_width_mg_per_kg": 194.55093417842434,
+      "ridge_mae_mg_per_kg": 373.05149343688754,
+      "underpredicted_fraction": 1.0
+    },
+    {
+      "fabric_id": "vassilenko_row_16",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 0.8,
+      "median_global_band_half_width_mg_per_kg": 225.77817205179088,
+      "ridge_mae_mg_per_kg": 157.68890909603144,
+      "underpredicted_fraction": 1.0
+    },
+    {
+      "fabric_id": "vassilenko_row_30",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 0.8,
+      "median_global_band_half_width_mg_per_kg": 225.77817205179088,
+      "ridge_mae_mg_per_kg": 126.37136885114538,
+      "underpredicted_fraction": 1.0
+    },
+    {
+      "fabric_id": "vassilenko_row_29",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 0.8,
+      "median_global_band_half_width_mg_per_kg": 225.77817205179088,
+      "ridge_mae_mg_per_kg": 55.82867856939356,
+      "underpredicted_fraction": 0.4
+    },
+    {
+      "fabric_id": "vassilenko_row_7",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 1.0,
+      "median_global_band_half_width_mg_per_kg": 228.05774592337812,
+      "ridge_mae_mg_per_kg": 149.86577766845508,
+      "underpredicted_fraction": 0.0
+    },
+    {
+      "fabric_id": "vassilenko_row_17",
+      "n": 3,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 1.0,
+      "median_global_band_half_width_mg_per_kg": 227.71310094921137,
+      "ridge_mae_mg_per_kg": 91.15617565795985,
+      "underpredicted_fraction": 0.0
+    },
+    {
+      "fabric_id": "vassilenko_row_14",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 1.0,
+      "median_global_band_half_width_mg_per_kg": 228.05774592337812,
+      "ridge_mae_mg_per_kg": 77.66480668534057,
+      "underpredicted_fraction": 0.6
+    },
+    {
+      "fabric_id": "vassilenko_row_18",
+      "n": 5,
+      "distinct_fabrics": 1,
+      "empirical_global_band_coverage_fraction": 1.0,
+      "median_global_band_half_width_mg_per_kg": 228.05774592337812,
+      "ridge_mae_mg_per_kg": 76.3464319788694,
+      "underpredicted_fraction": 0.0
+    }
+  ],
+  "warnings": [
+    "These bands are DESCRIPTIVE diagnostics, NOT validated 90% prediction intervals.",
+    "Upstream OOF predictions were produced from overlapping fitted folds; residual cutoffs are not an independent calibration set.",
+    "Multiple washes per fabric are correlated and do not count as independent calibration specimens.",
+    "Coverage measured on observed-target subgroups is a diagnostic, not an inference-time applicability test.",
+    "A 90% residual quantile does not imply guaranteed 90% future coverage.",
+    "No external study, deployment artifact, calibration guarantee, or new-fabric reliability score is produced.",
+    "Review experimental protocols and missing early washes before extending beyond the source study."
+  ],
+  "source_alignment_status": "STRUCTURAL_AUDIT_PASS",
+  "source_workbook_sha256": "a009362e4d1965936ddce76109628ad4fc47615c3df95e3d356fe6d3a4e34eca"
+}

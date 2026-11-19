@@ -1,0 +1,51 @@
+/* FIBREPRINT v0.27 — page-to-page living textile laboratory. Import LAST via App.jsx. */
+:root{--fp-paper:#f2f0e8;--fp-ink:#183b3e;--fp-teal:#154f58;--fp-border:#b5c4bd}
+body{background:var(--fp-paper)}
+.site{overflow:clip;background:var(--fp-paper);min-height:100vh}
+.site .fp-v27-header{height:76px;position:sticky;top:0;z-index:1000;background:rgba(246,243,235,.97);border-bottom:1px solid #abb9b2;padding-inline:clamp(20px,4vw,74px);gap:15px}
+.fp-brand-button{background:transparent;border:0;color:var(--fp-ink);display:flex;align-items:center;gap:12px;text-align:left;padding:0;flex-shrink:0}
+.fp-v27-header .nav{gap:4px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.fp-v27-header .nav button{font:700 11px 'Lato',sans-serif;letter-spacing:.01em;white-space:nowrap;color:#345457;border:1px solid transparent;background:transparent;padding:11px 10px;transition:background .2s,border .2s}
+.fp-v27-header .nav button:hover,.fp-v27-header .nav button.fp-nav-active{color:#0e4852;background:#e0eae5;border-color:#c4d5cc}
+.fp-v27-header .top-actions{gap:11px;flex-shrink:0}.fp-v27-header .user-handle{font-size:11px;max-width:110px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.fp-v27-header .logout-trigger{border:0;background:transparent;color:#31565a;font-size:11px;font-weight:800;cursor:pointer}
+.fp-v27-header .brand-monogram{font-size:32px}.fp-v27-header .brand-word{font-size:11px}
+.fp-v27-main{position:relative;isolation:isolate;min-height:calc(100vh - 140px);background:transparent}
+.fp-route-transition{position:relative;z-index:2;animation:fp-route-in .32s ease both}
+@keyframes fp-route-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.fp-page{position:relative;max-width:1760px;margin-inline:auto;min-height:calc(100vh - 180px);padding-bottom:12px}
+.fp-page .hero,.fp-page .process,.fp-page .workbench,.fp-page .evidence,.fp-page .fp-textile-atlas,.fp-page .micro-section,.fp-page .fieldnotes,.fp-page .quizlab,.fp-page .glossary{scroll-margin-top:90px}
+/* Smooth translucent crossfades: never reuse old denim or fleece photos. */
+.fp-textile-ambient{position:fixed;inset:76px 0 0;z-index:0;overflow:hidden;pointer-events:none;background:#e9ede6}
+.fp-ambient-layer{position:absolute;inset:-5%;opacity:0;background-size:cover;background-position:center;filter:blur(14px) saturate(.68);animation:fp-ambient-fade 24s linear infinite,fp-ambient-drift 24s ease-in-out infinite alternate;will-change:opacity,transform}
+.fp-ambient-layer.a{background-image:url('/images/editorial/linen.webp');animation-delay:0s;opacity:.12}
+.fp-ambient-layer.b{background-image:url('/images/editorial/rib-knit.webp');animation-delay:-16s}
+.fp-ambient-layer.c{background-image:url('/images/editorial/satin.webp');animation-delay:-8s}
+.fp-textile-ambient:after{content:'';position:absolute;inset:0;background:rgba(247,246,239,.80)}
+@keyframes fp-ambient-fade{0%,2%{opacity:0}10%,29%{opacity:.37}39%,100%{opacity:0}}
+@keyframes fp-ambient-drift{from{transform:scale(1.05) translate3d(-1%,0,0)}to{transform:scale(1.12) translate3d(2%,-1%,0)}}
+/* Intro: no strips, no secondary photo wall. */
+.fp-home-view .hero{background:transparent!important;padding:26px clamp(20px,4vw,74px) 0!important}
+.fp-home-view .hero-top{padding:0 0 18px}.fp-home-view .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,.90fr);min-height:clamp(490px,67vh,710px)}
+.fp-home-view .hero-copy{padding:70px 35px 45px 0;justify-content:center}.fp-home-view .hero h1{font-size:clamp(68px,7.1vw,128px)!important;line-height:.88!important;max-width:760px}.fp-home-view .hero p{font-size:clamp(16px,1.3vw,19px)!important;max-width:520px}.fp-home-view .hero-art{min-height:480px;border-radius:4px;box-shadow:0 20px 55px rgba(22,50,46,.12)}.fp-home-view .fp-hero-photo>img{min-height:100%;object-fit:cover}
+.fp-home-view .process{background:rgba(245,244,237,.85)!important;padding:18px clamp(20px,4vw,74px) 26px!important;border-top:1px solid #b9c7bb}
+.fp-home-view .process .fp-process-heading{display:flex;align-items:center;gap:20px}.fp-home-view .process h2{font-size:clamp(28px,3vw,48px)!important;margin:10px 0!important}.fp-home-view .process .section-intro{margin:0!important;font-size:12px}.fp-home-view .fp-process-badge{display:none}.fp-home-view .process-line{margin-top:10px}.fp-home-view .process-node{min-height:82px!important;padding:10px!important;gap:5px}.fp-home-view .process-node strong{font-size:15px!important}.fp-home-view .process-node .fp-node-detail{display:none}.fp-home-view .process-node .node-num{font-size:22px}
+/* Atlas: photographs intentionally don't fill the whole viewport. */
+.fp-atlas-view .fp-textile-atlas{background:rgba(246,244,237,.88)!important;padding:35px clamp(20px,4vw,74px) 30px!important}
+.fp-atlas-view .fp-atlas-heading{margin-bottom:20px!important}.fp-atlas-view .fp-atlas-heading h2{font-size:clamp(48px,5vw,80px)!important;line-height:.95!important;margin:10px 0!important}
+.fp-atlas-view .fp-atlas-grid{gap:13px!important}.fp-atlas-view .fp-atlas-card{background:#f6f4ec}.fp-atlas-view .fp-atlas-img{aspect-ratio:1.55/1!important}.fp-atlas-view .fp-atlas-img img{object-fit:cover}.fp-atlas-view .fp-atlas-description{padding:12px!important}.fp-atlas-view .fp-atlas-description h3{font-size:clamp(21px,2vw,29px)!important}.fp-atlas-view .fp-photo-source{min-height:29px;font-size:9px}
+/* Workbench: make it feel like a focused, stand-alone room. */
+.fp-workbench-view{max-width:none;background:#0c4651}.fp-workbench-view .workbench{padding:38px clamp(20px,4vw,74px) 34px!important;background:transparent!important}
+.fp-workbench-view .workbench h2{font-size:clamp(45px,5vw,77px)!important;margin:10px 0!important}.fp-workbench-view .workbench-head{padding-bottom:23px!important}
+.fp-workbench-view .panel{min-height:370px!important;padding:25px!important}.fp-workbench-view .panel h3{font-size:clamp(34px,3.3vw,50px)!important}.fp-workbench-view .formgrid{margin:18px 0!important}
+/* Evidence and research are self-contained pages, never stacked under atlas. */
+.fp-evidence-view .evidence{background:rgba(245,243,236,.97)!important;padding:32px clamp(20px,4vw,74px)!important}.fp-evidence-view .evidence h2{font-size:clamp(48px,5vw,82px)!important;margin:11px 0!important}.fp-evidence-view .source-list{margin-top:15px}.fp-evidence-view .source{padding:14px 6px}.fp-evidence-view .source h3{font-size:27px}.fp-evidence-view .csv-area{margin-top:18px}
+.fp-research-view,.fp-microscope-view,.fp-guide-view{background:#eeede4}.fp-research-view>*,.fp-microscope-view>*,.fp-guide-view>*{max-width:100%}
+.fp-microscope-view .micro-section{padding:32px clamp(20px,4vw,74px)!important}.fp-guide-view .fieldnotes,.fp-guide-view .quizlab,.fp-guide-view .glossary{padding:34px clamp(20px,4vw,74px)!important}
+.fp-guide-view .field-intro h2,.fp-guide-view .quizlab h2,.fp-guide-view .glossary h2{font-size:clamp(48px,5vw,80px)!important}
+.fp-page-foot{position:relative;z-index:2;background:#143f46;color:#e6eeea;max-width:1760px;margin:0 auto;min-height:95px;padding:20px clamp(20px,4vw,74px);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.fp-page-index{font-size:10px;letter-spacing:.14em;font-weight:800;color:#b4d1cf}.fp-page-foot-actions{display:flex;align-items:center;flex-wrap:wrap;gap:15px}.fp-page-foot button{font:800 12px 'Lato',sans-serif;cursor:pointer;min-height:43px}.fp-page-prev{border:1px solid #75918e;background:transparent;color:#e7f1ea;padding:10px 14px}.fp-page-next{border:0;background:#e5eee5;color:#163c42;padding:10px 17px;display:inline-flex;gap:12px;align-items:center}.fp-page-next:hover{background:#c7ded3}
+.site footer{font-size:10px;min-height:55px;padding:15px clamp(20px,4vw,74px)!important;background:#e8e7df}
+@media(max-width:1260px){.fp-v27-header .nav button{padding:9px 6px;font-size:10px}.fp-v27-header .top-actions .user-handle{display:none}.fp-atlas-view .fp-atlas-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:1000px){.fp-v27-header .mobile-trigger{display:block}.fp-v27-header .nav{display:none;position:absolute;top:76px;left:0;right:0;align-items:stretch;flex-direction:column;padding:15px 5%;background:#f4f3ed;box-shadow:0 12px 30px #0b293120}.fp-v27-header .nav.open{display:flex}.fp-v27-header .nav button{text-align:left;font-size:13px;padding:12px}.fp-home-view .hero-grid{grid-template-columns:1fr}.fp-home-view .hero-art{min-height:320px}.fp-home-view .hero-copy{padding:40px 0 20px}.fp-home-view .hero h1{font-size:clamp(64px,11vw,110px)!important}.fp-page-foot{align-items:flex-start;flex-direction:column}}
+@media(max-width:650px){.fp-v27-header{height:70px!important}.fp-v27-header .nav{top:70px}.fp-v27-header .connection{display:none}.fp-home-view .hero{padding-top:20px!important}.fp-home-view .hero h1{font-size:clamp(53px,14vw,75px)!important}.fp-home-view .hero-art{min-height:280px}.fp-home-view .process-line{grid-template-columns:repeat(2,1fr)}.fp-atlas-view .fp-atlas-grid{grid-template-columns:1fr 1fr!important;gap:8px!important}.fp-atlas-view .fp-atlas-img{aspect-ratio:1/1!important}.fp-atlas-view .fp-atlas-description h3{font-size:21px!important}.fp-atlas-view .fp-atlas-description p{display:none}.fp-atlas-view .fp-atlas-heading{display:block}.fp-v27-header .brand-word small{display:none}.fp-page-foot{padding:18px 20px}}
+@media(prefers-reduced-motion:reduce){.fp-ambient-layer,.fp-route-transition{animation:none!important}.fp-ambient-layer.a{opacity:.1}.fp-ambient-layer.b,.fp-ambient-layer.c{opacity:0}html{scroll-behavior:auto!important}}

@@ -1,0 +1,55 @@
+{
+  "status": "BLOCKED_EXTERNAL_VALIDATION",
+  "scientific_status": "RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "version": "v0.24",
+  "created_utc": "2026-11-19T11:38:19.112711+00:00",
+  "candidate_study": "hazlehurst_2023",
+  "comparison_checks": {
+    "same_unit": {
+      "pass": true,
+      "detail": "Target units are not both documented as mg/kg"
+    },
+    "same_measurement_basis": {
+      "pass": true,
+      "detail": "Study outcome denominators are not comparable at the individual-fabric wash level"
+    },
+    "same_specimen_unit": {
+      "pass": true,
+      "detail": "External outcome is not an individual-fabric specimen measurement"
+    },
+    "same_laundry_device": {
+      "pass": false,
+      "detail": "Different laundering apparatus: a protocol/domain shift must be reviewed"
+    },
+    "protocol_harmonised": {
+      "pass": false,
+      "detail": "Protocol equivalence has not been established or independently reviewed"
+    },
+    "raw_measurements_verified": {
+      "pass": false,
+      "detail": "Individual external measurements have not been verified accessible"
+    }
+  },
+  "hard_blockers": [
+    "Different laundering apparatus: a protocol/domain shift must be reviewed",
+    "Protocol equivalence has not been established or independently reviewed",
+    "Individual external measurements have not been verified accessible",
+    "No independently transcribed and source-verified external measurement CSV provided"
+  ],
+  "warnings": [
+    "2 published summary values exist; these are NOT individual measurements"
+  ],
+  "published_summary_records_not_individual_data": 2,
+  "external_csv_rows": 0,
+  "external_csv_unique_fabric_labels": 0,
+  "external_csv_sha256": null,
+  "row_issue_counts": {},
+  "external_predictions_evaluated": 0,
+  "external_metrics_available": false,
+  "limitations": [
+    "Similar units do not establish protocol compatibility.",
+    "Published group means and confidence intervals cannot be treated as independent specimen measurements.",
+    "A verified raw dataset and manually approved harmonisation are required before an external test.",
+    "Do not use this gate report as an assessment of predictive generalisation."
+  ]
+}

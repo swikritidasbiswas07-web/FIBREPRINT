@@ -1,0 +1,34 @@
+{
+  "status": "STRUCTURAL_AUDIT_PASS",
+  "scientific_status": "RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "created_utc": "2026-11-18T18:12:32.876115+00:00",
+  "source_file_sha256": "a009362e4d1965936ddce76109628ad4fc47615c3df95e3d356fe6d3a4e34eca",
+  "source_workbook": "data\\source_figshare_14675760_v4\\figshare_microfiber_data.xlsx",
+  "csv_path": "data\\vassilenko_extracted_washes.csv",
+  "csv_rows": 155,
+  "valid_source_mass_cells": 155,
+  "matched_source_cells": 155,
+  "csv_fabric_count": 37,
+  "csv_rows_by_wash": {
+    "1": 22,
+    "2": 22,
+    "3": 37,
+    "4": 37,
+    "5": 37
+  },
+  "missing_source_mass_cells_by_wash": {
+    "1": 15,
+    "2": 15
+  },
+  "count_present_but_mass_missing": [],
+  "missing_fibre_count_values_among_extracted_rows": 18,
+  "negative_mass_cells": [],
+  "mismatches": [],
+  "limitations": [
+    "Passing checks proves structural agreement between workbook cells and extracted CSV, not correctness of the source study.",
+    "The original paper and experimental protocol must be manually reviewed for sample definitions, conditions and missingness.",
+    "No temperature or water-to-fabric ratio values are inferred.",
+    "Missing source mass cells must never be zero-filled.",
+    "All predictions remain research-only; structural validation is not external predictive validation."
+  ]
+}

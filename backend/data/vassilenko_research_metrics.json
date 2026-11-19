@@ -1,0 +1,81 @@
+{
+  "study": "Vassilenko et al. (2021)",
+  "doi": "10.1371/journal.pone.0250346",
+  "data_status": "EXTRACTED_UNVERIFIED",
+  "model_status": "RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "created_utc": "2026-11-18T17:23:20.497036+00:00",
+  "target": "measured fibre release mass, mg/kg fabric per wash",
+  "feature_columns": [
+    "fabric_type",
+    "yarn_type",
+    "construction",
+    "mechanical_finishing",
+    "mechanical_presence",
+    "density_gsm",
+    "wash_number",
+    "polyester_pct",
+    "cotton_pct",
+    "nylon_pct",
+    "elastane_pct",
+    "polyurethane_pct",
+    "spandex_pct",
+    "polyamide_pct",
+    "wool_pct"
+  ],
+  "excluded_unrecorded_parameters": [
+    "temperature_c",
+    "water_fabric_ratio"
+  ],
+  "rows": 155,
+  "distinct_fabrics": 37,
+  "grouping": "5-fold GroupKFold by fabric_id \u2014 all wash cycles from one fabric stay together",
+  "metrics": {
+    "model_mae_mg_per_kg": 94.94953597202137,
+    "baseline_mae_mg_per_kg": 125.03935483870967,
+    "model_rmse_mg_per_kg": 190.41195978970512,
+    "model_r2": 0.18565557982013814
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "training_fabrics": 30,
+      "held_out_fabrics": 7,
+      "held_out_observations": 31,
+      "model_mae_mg_per_kg": 88.31111402494992,
+      "baseline_mae_mg_per_kg": 92.86774193548388
+    },
+    {
+      "fold": 2,
+      "training_fabrics": 30,
+      "held_out_fabrics": 7,
+      "held_out_observations": 31,
+      "model_mae_mg_per_kg": 46.458161153978104,
+      "baseline_mae_mg_per_kg": 76.59032258064516
+    },
+    {
+      "fold": 3,
+      "training_fabrics": 29,
+      "held_out_fabrics": 8,
+      "held_out_observations": 32,
+      "model_mae_mg_per_kg": 56.42159428948712,
+      "baseline_mae_mg_per_kg": 73.253125
+    },
+    {
+      "fold": 4,
+      "training_fabrics": 29,
+      "held_out_fabrics": 8,
+      "held_out_observations": 32,
+      "model_mae_mg_per_kg": 144.57803653776938,
+      "baseline_mae_mg_per_kg": 197.7875
+    },
+    {
+      "fold": 5,
+      "training_fabrics": 30,
+      "held_out_fabrics": 7,
+      "held_out_observations": 29,
+      "model_mae_mg_per_kg": 141.6324951256667,
+      "baseline_mae_mg_per_kg": 188.08965517241376
+    }
+  ],
+  "warning": "One-study, fabric-held-out exploration only; method and source records require manual review. Do not expose these estimates as product predictions."
+}

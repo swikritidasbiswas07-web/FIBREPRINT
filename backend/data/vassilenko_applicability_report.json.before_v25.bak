@@ -1,0 +1,770 @@
+{
+  "status": "RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "analysis": "POSTHOC_FIXED_FLAG_APPLICABILITY_DIAGNOSTIC",
+  "created_utc": "2026-11-18T18:42:14.830509+00:00",
+  "audit": "STRUCTURAL_AUDIT_PASS",
+  "source_workbook_sha256": "a009362e4d1965936ddce76109628ad4fc47615c3df95e3d356fe6d3a4e34eca",
+  "input_predictions": "data\\vassilenko_group_conformal_predictions.csv",
+  "rule": "Use the existing v0.21 pre-outcome flag: abstain for unseen categorical labels or GSM outside training range; no threshold selected from test outcomes.",
+  "all": {
+    "rows": 676,
+    "distinct_fabrics": 37,
+    "mae_mg_per_kg": 90.96282421792029,
+    "interval_coverage": 0.9585798816568047,
+    "fabric_simultaneous_coverage": 0.925,
+    "high_release_observed_rows": 41,
+    "high_release_coverage_posthoc": 0.43902439024390244
+  },
+  "flagged": {
+    "rows": 262,
+    "distinct_fabrics": 24,
+    "mae_mg_per_kg": 93.35967844358991,
+    "interval_coverage": 0.9541984732824428,
+    "fabric_simultaneous_coverage": 0.9032258064516129,
+    "high_release_observed_rows": 23,
+    "high_release_coverage_posthoc": 0.5217391304347826
+  },
+  "retained": {
+    "rows": 414,
+    "distinct_fabrics": 29,
+    "mae_mg_per_kg": 89.44597444225494,
+    "interval_coverage": 0.961352657004831,
+    "fabric_simultaneous_coverage": 0.9387755102040817,
+    "high_release_observed_rows": 18,
+    "high_release_coverage_posthoc": 0.3333333333333333
+  },
+  "summary": {
+    "warning_rate": 0.3875739644970414,
+    "retained_fraction": 0.6124260355029586,
+    "missed_interval_violations_by_warning": 12,
+    "total_interval_violations": 28,
+    "warning_recall_of_interval_miss": 0.42857142857142855,
+    "warning_precision_for_interval_miss": 0.04580152671755725,
+    "high_release_warning_recall_posthoc": 0.5609756097560976,
+    "high_release_warning_count_posthoc": 23,
+    "high_release_observation_appearances_posthoc": 41,
+    "high_release_unflagged_appearances_posthoc": 18
+  },
+  "fabric_appearance_level": {
+    "test_fabric_appearances": 160,
+    "unique_fabrics_across_repeated_splits": 37,
+    "warning_rate_fabric_appearances": 0.3875,
+    "warning_recall_of_any_interval_miss": 0.5,
+    "warning_recall_of_any_high_release_posthoc": 0.5,
+    "mean_fabric_mae_retained": 84.88391076862021,
+    "mean_fabric_mae_flagged": 83.46233259731405
+  },
+  "reason_types": {
+    "unseen_category": {
+      "rows": 226,
+      "distinct_fabrics": 22,
+      "mae_mg_per_kg": 89.7693499489264,
+      "interval_coverage": 0.9469026548672567,
+      "fabric_simultaneous_coverage": 0.8846153846153846,
+      "high_release_observed_rows": 18,
+      "high_release_coverage_posthoc": 0.3888888888888889
+    },
+    "outside_training_range": {
+      "rows": 79,
+      "distinct_fabrics": 6,
+      "mae_mg_per_kg": 136.538587364753,
+      "interval_coverage": 0.9493670886075949,
+      "fabric_simultaneous_coverage": 0.8947368421052632,
+      "high_release_observed_rows": 15,
+      "high_release_coverage_posthoc": 0.7333333333333333
+    }
+  },
+  "per_split": [
+    {
+      "repeat": 1,
+      "n_test_rows": 34,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 34,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 135.10610741001477,
+        "interval_coverage": 0.9705882352941176,
+        "fabric_simultaneous_coverage": 0.875,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 21,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 196.61277414469282,
+        "interval_coverage": 0.9523809523809523,
+        "fabric_simultaneous_coverage": 0.8,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 13,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 35.74918422322716,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.38235294117647056,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 2,
+      "n_test_rows": 38,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 38,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 55.546275274912794,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 1,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "retained": {
+        "rows": 23,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 73.81912377657177,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 1,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "flagged": {
+        "rows": 15,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 27.527907572369102,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.39473684210526316,
+      "high_release_observations_posthoc": 1
+    },
+    {
+      "repeat": 3,
+      "n_test_rows": 38,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 38,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 150.65917279811194,
+        "interval_coverage": 0.9473684210526315,
+        "fabric_simultaneous_coverage": 0.875,
+        "high_release_observed_rows": 7,
+        "high_release_coverage_posthoc": 0.7142857142857143
+      },
+      "retained": {
+        "rows": 30,
+        "distinct_fabrics": 6,
+        "mae_mg_per_kg": 86.30530824074393,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 2,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "flagged": {
+        "rows": 8,
+        "distinct_fabrics": 2,
+        "mae_mg_per_kg": 391.9861648882419,
+        "interval_coverage": 0.75,
+        "fabric_simultaneous_coverage": 0.5,
+        "high_release_observed_rows": 5,
+        "high_release_coverage_posthoc": 0.6
+      },
+      "warning_fraction": 0.21052631578947367,
+      "high_release_observations_posthoc": 7
+    },
+    {
+      "repeat": 4,
+      "n_test_rows": 36,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 36,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 85.36737168363857,
+        "interval_coverage": 0.9166666666666666,
+        "fabric_simultaneous_coverage": 0.875,
+        "high_release_observed_rows": 2,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "retained": {
+        "rows": 28,
+        "distinct_fabrics": 6,
+        "mae_mg_per_kg": 104.2163618366153,
+        "interval_coverage": 0.8928571428571429,
+        "fabric_simultaneous_coverage": 0.8333333333333334,
+        "high_release_observed_rows": 2,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "flagged": {
+        "rows": 8,
+        "distinct_fabrics": 2,
+        "mae_mg_per_kg": 19.395906148219943,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.2222222222222222,
+      "high_release_observations_posthoc": 2
+    },
+    {
+      "repeat": 5,
+      "n_test_rows": 34,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 34,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 55.20580292777325,
+        "interval_coverage": 0.9705882352941176,
+        "fabric_simultaneous_coverage": 0.875,
+        "high_release_observed_rows": 1,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "retained": {
+        "rows": 8,
+        "distinct_fabrics": 2,
+        "mae_mg_per_kg": 32.66554764045229,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 26,
+        "distinct_fabrics": 6,
+        "mae_mg_per_kg": 62.14126609310276,
+        "interval_coverage": 0.9615384615384616,
+        "fabric_simultaneous_coverage": 0.8333333333333334,
+        "high_release_observed_rows": 1,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "warning_fraction": 0.7647058823529411,
+      "high_release_observations_posthoc": 1
+    },
+    {
+      "repeat": 6,
+      "n_test_rows": 34,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 34,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 25.04640427950687,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 23,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 28.352972580309416,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 11,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 18.132670559647007,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.3235294117647059,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 7,
+      "n_test_rows": 32,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 32,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 57.18247125487014,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 18,
+        "distinct_fabrics": 4,
+        "mae_mg_per_kg": 67.92496874316153,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 14,
+        "distinct_fabrics": 4,
+        "mae_mg_per_kg": 43.37068876992406,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.4375,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 8,
+      "n_test_rows": 32,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 32,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 44.69496591707011,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 19,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 61.30875979017293,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 13,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 20.413267179458277,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.40625,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 9,
+      "n_test_rows": 32,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 32,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 67.38694232462936,
+        "interval_coverage": 0.9375,
+        "fabric_simultaneous_coverage": 0.75,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 21,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 92.59288992892047,
+        "interval_coverage": 0.9047619047619048,
+        "fabric_simultaneous_coverage": 0.6,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 11,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 19.266496898255465,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.34375,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 10,
+      "n_test_rows": 34,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 34,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 150.58953926729654,
+        "interval_coverage": 0.8529411764705882,
+        "fabric_simultaneous_coverage": 0.875,
+        "high_release_observed_rows": 5,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "retained": {
+        "rows": 11,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 28.384824398458075,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 23,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 209.0352724654367,
+        "interval_coverage": 0.782608695652174,
+        "fabric_simultaneous_coverage": 0.8,
+        "high_release_observed_rows": 5,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "warning_fraction": 0.6764705882352942,
+      "high_release_observations_posthoc": 5
+    },
+    {
+      "repeat": 11,
+      "n_test_rows": 32,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 32,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 41.781377724421,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 13,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 30.491078881818712,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 19,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 49.50631903778046,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.59375,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 12,
+      "n_test_rows": 32,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 32,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 34.10660253805826,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 21,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 32.65765122288961,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 11,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 36.87278232156206,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.34375,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 13,
+      "n_test_rows": 28,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 28,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 78.36263414144653,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 23,
+        "distinct_fabrics": 7,
+        "mae_mg_per_kg": 91.2666656115411,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 5,
+        "distinct_fabrics": 1,
+        "mae_mg_per_kg": 19.00408937901148,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.17857142857142858,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 14,
+      "n_test_rows": 36,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 36,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 100.385119630699,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 5,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "retained": {
+        "rows": 15,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 25.95403832357124,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 21,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 153.55017770721884,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 5,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "warning_fraction": 0.5833333333333334,
+      "high_release_observations_posthoc": 5
+    },
+    {
+      "repeat": 15,
+      "n_test_rows": 32,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 32,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 128.0168796260224,
+        "interval_coverage": 0.84375,
+        "fabric_simultaneous_coverage": 0.875,
+        "high_release_observed_rows": 6,
+        "high_release_coverage_posthoc": 0.16666666666666666
+      },
+      "retained": {
+        "rows": 32,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 128.0168796260224,
+        "interval_coverage": 0.84375,
+        "fabric_simultaneous_coverage": 0.875,
+        "high_release_observed_rows": 6,
+        "high_release_coverage_posthoc": 0.16666666666666666
+      },
+      "flagged": {
+        "rows": 0,
+        "distinct_fabrics": 0,
+        "mae_mg_per_kg": null,
+        "interval_coverage": null,
+        "fabric_simultaneous_coverage": null,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null,
+        "high_release_recall_of_warning_posthoc": null
+      },
+      "warning_fraction": 0.0,
+      "high_release_observations_posthoc": 6
+    },
+    {
+      "repeat": 16,
+      "n_test_rows": 36,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 36,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 114.17212605268664,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "retained": {
+        "rows": 31,
+        "distinct_fabrics": 7,
+        "mae_mg_per_kg": 127.52177905330296,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 5,
+        "distinct_fabrics": 1,
+        "mae_mg_per_kg": 31.404277448865578,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.1388888888888889,
+      "high_release_observations_posthoc": 0
+    },
+    {
+      "repeat": 17,
+      "n_test_rows": 34,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 34,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 98.54528945679708,
+        "interval_coverage": 0.9411764705882353,
+        "fabric_simultaneous_coverage": 0.75,
+        "high_release_observed_rows": 1,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "retained": {
+        "rows": 11,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 85.00141018274732,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 23,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 105.02279693569042,
+        "interval_coverage": 0.9130434782608695,
+        "fabric_simultaneous_coverage": 0.6,
+        "high_release_observed_rows": 1,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "warning_fraction": 0.6764705882352942,
+      "high_release_observations_posthoc": 1
+    },
+    {
+      "repeat": 18,
+      "n_test_rows": 36,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 36,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 187.3142532337013,
+        "interval_coverage": 0.8055555555555556,
+        "fabric_simultaneous_coverage": 0.75,
+        "high_release_observed_rows": 10,
+        "high_release_coverage_posthoc": 0.3
+      },
+      "retained": {
+        "rows": 25,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 155.1425608029984,
+        "interval_coverage": 0.8,
+        "fabric_simultaneous_coverage": 0.8,
+        "high_release_observed_rows": 5,
+        "high_release_coverage_posthoc": 0.0
+      },
+      "flagged": {
+        "rows": 11,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 260.4317360307534,
+        "interval_coverage": 0.8181818181818182,
+        "fabric_simultaneous_coverage": 0.6666666666666666,
+        "high_release_observed_rows": 5,
+        "high_release_coverage_posthoc": 0.6
+      },
+      "warning_fraction": 0.3055555555555556,
+      "high_release_observations_posthoc": 10
+    },
+    {
+      "repeat": 19,
+      "n_test_rows": 30,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 30,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 83.75683229255903,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 1,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "retained": {
+        "rows": 20,
+        "distinct_fabrics": 6,
+        "mae_mg_per_kg": 38.331323664022506,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "flagged": {
+        "rows": 10,
+        "distinct_fabrics": 2,
+        "mae_mg_per_kg": 174.60784954963205,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 1,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "warning_fraction": 0.3333333333333333,
+      "high_release_observations_posthoc": 1
+    },
+    {
+      "repeat": 20,
+      "n_test_rows": 36,
+      "test_fabrics": 8,
+      "all": {
+        "rows": 36,
+        "distinct_fabrics": 8,
+        "mae_mg_per_kg": 102.03948734017465,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 2,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "retained": {
+        "rows": 21,
+        "distinct_fabrics": 5,
+        "mae_mg_per_kg": 139.92884127052034,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 2,
+        "high_release_coverage_posthoc": 1.0
+      },
+      "flagged": {
+        "rows": 15,
+        "distinct_fabrics": 3,
+        "mae_mg_per_kg": 48.994391837690706,
+        "interval_coverage": 1.0,
+        "fabric_simultaneous_coverage": 1.0,
+        "high_release_observed_rows": 0,
+        "high_release_coverage_posthoc": null
+      },
+      "warning_fraction": 0.4166666666666667,
+      "high_release_observations_posthoc": 2
+    }
+  ],
+  "limitations": [
+    "This is a diagnostic of a FIXED pre-existing warning, not an independently validated abstention policy.",
+    "Test fabrics recur across 20 splits; pooled rows and fabric appearances are not independent observations.",
+    "Even the repeated splits are from the study previously used for model and feature selection.",
+    "High-release groups are defined using observed outcomes solely for retrospective evaluation.",
+    "No new warning thresholds are fitted; do not interpret retained subset metrics as prospective performance guarantees.",
+    "Grouping washes into fabric appearances does not make repeated appearances across splits independent.",
+    "Prediction bands may remain too wide for practical use.",
+    "This script does not train or deploy a model; future validation requires an independent dataset."
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "status": "RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "data_status": "EXTRACTED_UNVERIFIED",
+  "created_utc": "2026-11-18T17:40:05.145512+00:00",
+  "oof_rows": 155,
+  "distinct_fabrics": 37,
+  "overall": {
+    "observations": 155,
+    "fabrics": 37,
+    "model_mae_mg_per_kg": 94.94953597202135,
+    "baseline_mae_mg_per_kg": 125.03935483870967,
+    "mean_signed_error_mg_per_kg": 60.795195898746016,
+    "underprediction_fraction": 0.567741935483871
+  },
+  "high_release_400_plus": {
+    "observations": 14,
+    "fabrics": 5,
+    "model_mae_mg_per_kg": 541.1832065729031,
+    "baseline_mae_mg_per_kg": 620.0714285714284,
+    "mean_signed_error_mg_per_kg": 541.1832065729031,
+    "underprediction_fraction": 1.0
+  },
+  "high_release_all_underpredicted": true,
+  "top_two_error_fabrics": [
+    {
+      "fabric_id": "vassilenko_row_12",
+      "squared_error_share_pct": 47.1667398468742
+    },
+    {
+      "fabric_id": "vassilenko_row_21",
+      "squared_error_share_pct": 31.618692919137636
+    }
+  ],
+  "top_two_combined_squared_error_share_pct": 78.78543276601184,
+  "by_release_level_descriptive_only": {
+    "below_100_mg_per_kg": {
+      "observations": 74,
+      "fabrics": 24,
+      "model_mae_mg_per_kg": 35.295099368163335,
+      "baseline_mae_mg_per_kg": 69.67162162162163,
+      "mean_signed_error_mg_per_kg": -20.302405168178126,
+      "underprediction_fraction": 0.36486486486486486
+    },
+    "100_to_below_400_mg_per_kg": {
+      "observations": 67,
+      "fabrics": 19,
+      "model_mae_mg_per_kg": 67.59366911042655,
+      "baseline_mae_mg_per_kg": 82.75223880597014,
+      "mean_signed_error_mg_per_kg": 49.98609633925628,
+      "underprediction_fraction": 0.7014925373134329
+    },
+    "400_or_more_mg_per_kg": {
+      "observations": 14,
+      "fabrics": 5,
+      "model_mae_mg_per_kg": 541.1832065729031,
+      "baseline_mae_mg_per_kg": 620.0714285714284,
+      "mean_signed_error_mg_per_kg": 541.1832065729031,
+      "underprediction_fraction": 1.0
+    }
+  },
+  "by_wash": {
+    "1": {
+      "observations": 22,
+      "fabrics": 22,
+      "model_mae_mg_per_kg": 160.1166536287483,
+      "baseline_mae_mg_per_kg": 181.06363636363633,
+      "mean_signed_error_mg_per_kg": 118.80632838921719,
+      "underprediction_fraction": 0.7272727272727273
+    },
+    "2": {
+      "observations": 22,
+      "fabrics": 22,
+      "model_mae_mg_per_kg": 126.10345601321697,
+      "baseline_mae_mg_per_kg": 158.10909090909092,
+      "mean_signed_error_mg_per_kg": 92.13223629292398,
+      "underprediction_fraction": 0.6363636363636364
+    },
+    "3": {
+      "observations": 37,
+      "fabrics": 37,
+      "model_mae_mg_per_kg": 89.1814116101864,
+      "baseline_mae_mg_per_kg": 120.65945945945946,
+      "mean_signed_error_mg_per_kg": 56.95373576817292,
+      "underprediction_fraction": 0.5405405405405406
+    },
+    "4": {
+      "observations": 37,
+      "fabrics": 37,
+      "model_mae_mg_per_kg": 75.46564800452583,
+      "baseline_mae_mg_per_kg": 104.7108108108108,
+      "mean_signed_error_mg_per_kg": 42.404069751249104,
+      "underprediction_fraction": 0.5135135135135135
+    },
+    "5": {
+      "observations": 37,
+      "fabrics": 37,
+      "model_mae_mg_per_kg": 62.92957994042489,
+      "baseline_mae_mg_per_kg": 96.77297297297295,
+      "mean_signed_error_mg_per_kg": 29.901841542700325,
+      "underprediction_fraction": 0.5135135135135135
+    }
+  },
+  "by_description_keyword_proxy": {
+    "explicit_raised_surface": {
+      "tagged": {
+        "observations": 37,
+        "fabrics": 9,
+        "model_mae_mg_per_kg": 162.29441584735005,
+        "baseline_mae_mg_per_kg": 189.94324324324324,
+        "mean_signed_error_mg_per_kg": 114.24681686969654,
+        "underprediction_fraction": 0.5405405405405406
+      },
+      "untagged": {
+        "observations": 118,
+        "fabrics": 28,
+        "model_mae_mg_per_kg": 73.83292109585894,
+        "baseline_mae_mg_per_kg": 104.68813559322032,
+        "mean_signed_error_mg_per_kg": 44.03494186548187,
+        "underprediction_fraction": 0.576271186440678
+      },
+      "note": "Rule-based label extracted from free text; not scientifically verified morphology."
+    },
+    "fleece_term": {
+      "tagged": {
+        "observations": 51,
+        "fabrics": 11,
+        "model_mae_mg_per_kg": 180.26196067125744,
+        "baseline_mae_mg_per_kg": 202.03725490196078,
+        "mean_signed_error_mg_per_kg": 149.58500624342267,
+        "underprediction_fraction": 0.6078431372549019
+      },
+      "untagged": {
+        "observations": 104,
+        "fabrics": 26,
+        "model_mae_mg_per_kg": 53.1136353983575,
+        "baseline_mae_mg_per_kg": 87.28076923076924,
+        "mean_signed_error_mg_per_kg": 17.2540389027988,
+        "underprediction_fraction": 0.5480769230769231
+      },
+      "note": "Rule-based label extracted from free text; not scientifically verified morphology."
+    },
+    "jersey_term": {
+      "tagged": {
+        "observations": 32,
+        "fabrics": 8,
+        "model_mae_mg_per_kg": 72.16136703465355,
+        "baseline_mae_mg_per_kg": 86.509375,
+        "mean_signed_error_mg_per_kg": 45.843253121509754,
+        "underprediction_fraction": 0.65625
+      },
+      "untagged": {
+        "observations": 123,
+        "fabrics": 29,
+        "model_mae_mg_per_kg": 100.87816528906014,
+        "baseline_mae_mg_per_kg": 135.06341463414634,
+        "mean_signed_error_mg_per_kg": 64.68513223103513,
+        "underprediction_fraction": 0.5447154471544715
+      },
+      "note": "Rule-based label extracted from free text; not scientifically verified morphology."
+    },
+    "woven_or_plaid_term": {
+      "tagged": {
+        "observations": 18,
+        "fabrics": 4,
+        "model_mae_mg_per_kg": 69.6863868123899,
+        "baseline_mae_mg_per_kg": 119.25555555555557,
+        "mean_signed_error_mg_per_kg": 64.42898272365005,
+        "underprediction_fraction": 0.6666666666666666
+      },
+      "untagged": {
+        "observations": 137,
+        "fabrics": 33,
+        "model_mae_mg_per_kg": 98.26878184700941,
+        "baseline_mae_mg_per_kg": 125.7992700729927,
+        "mean_signed_error_mg_per_kg": 60.31776405313819,
+        "underprediction_fraction": 0.5547445255474452
+      },
+      "note": "Rule-based label extracted from free text; not scientifically verified morphology."
+    }
+  },
+  "sensitivity_no_refit": {
+    "all_fabrics": {
+      "observations": 155,
+      "fabrics": 37,
+      "model_mae_mg_per_kg": 94.94953597202135,
+      "baseline_mae_mg_per_kg": 125.03935483870967,
+      "mean_signed_error_mg_per_kg": 60.795195898746016,
+      "underprediction_fraction": 0.567741935483871
+    },
+    "excluding_two_worst_error_fabrics": {
+      "observations": 145,
+      "fabrics": 35,
+      "model_mae_mg_per_kg": 57.91852614189544,
+      "baseline_mae_mg_per_kg": 84.3551724137931,
+      "mean_signed_error_mg_per_kg": 21.408714339428705,
+      "underprediction_fraction": 0.5379310344827586
+    },
+    "warning": "This is a descriptive exclusion on existing OOF predictions. It is NOT retraining, not unbiased model selection, and not evidence that difficult fabrics can be omitted."
+  },
+  "warnings": [
+    "Source workbook extraction is not manually verified.",
+    "All thresholds, text-based groups and extreme-fabric rankings are post-hoc exploratory.",
+    "Error bands use measured outcomes, so are analysis-only, never inference-time gating.",
+    "Description keywords are proxies, not validated pile height or fibre morphology measurements.",
+    "Repeated washes from the same fabric are correlated; observation counts are not independent specimens."
+  ],
+  "exploratory_feature_ablation": {
+    "evaluation": "Fixed 5-fold GroupKFold by fabric ID; same holdouts across all models; no parameter tuning",
+    "keyword_features": [
+      "explicit_raised_surface",
+      "fleece_term",
+      "jersey_term",
+      "woven_or_plaid_term"
+    ],
+    "keyword_definitions": "Transparent regular-expression matches on specimen descriptions only; no direct morphological measurement",
+    "models": {
+      "rf_original_features": {
+        "mae_mg_per_kg": 94.94953597202137,
+        "rmse_mg_per_kg": 190.4119597897051,
+        "r2": 0.18565557982013825,
+        "folds": [
+          {
+            "fold": 1,
+            "n": 31,
+            "mae_mg_per_kg": 88.31111402494994
+          },
+          {
+            "fold": 2,
+            "n": 31,
+            "mae_mg_per_kg": 46.45816115397812
+          },
+          {
+            "fold": 3,
+            "n": 32,
+            "mae_mg_per_kg": 56.42159428948715
+          },
+          {
+            "fold": 4,
+            "n": 32,
+            "mae_mg_per_kg": 144.57803653776935
+          },
+          {
+            "fold": 5,
+            "n": 29,
+            "mae_mg_per_kg": 141.6324951256667
+          }
+        ]
+      },
+      "rf_plus_description_keywords": {
+        "mae_mg_per_kg": 95.5469538667424,
+        "rmse_mg_per_kg": 193.91686941379902,
+        "r2": 0.1554004189919198,
+        "folds": [
+          {
+            "fold": 1,
+            "n": 31,
+            "mae_mg_per_kg": 87.48319624667339
+          },
+          {
+            "fold": 2,
+            "n": 31,
+            "mae_mg_per_kg": 46.54466678164805
+          },
+          {
+            "fold": 3,
+            "n": 32,
+            "mae_mg_per_kg": 56.81700588892347
+          },
+          {
+            "fold": 4,
+            "n": 32,
+            "mae_mg_per_kg": 150.61149763474765
+          },
+          {
+            "fold": 5,
+            "n": 29,
+            "mae_mg_per_kg": 138.52420630033214
+          }
+        ]
+      },
+      "ridge_original_features": {
+        "mae_mg_per_kg": 87.94879479892926,
+        "rmse_mg_per_kg": 160.00428611305082,
+        "r2": 0.4249800507879661,
+        "folds": [
+          {
+            "fold": 1,
+            "n": 31,
+            "mae_mg_per_kg": 74.26204210593245
+          },
+          {
+            "fold": 2,
+            "n": 31,
+            "mae_mg_per_kg": 55.25451337120406
+          },
+          {
+            "fold": 3,
+            "n": 32,
+            "mae_mg_per_kg": 60.183894859692586
+          },
+          {
+            "fold": 4,
+            "n": 32,
+            "mae_mg_per_kg": 139.2123842822122
+          },
+          {
+            "fold": 5,
+            "n": 29,
+            "mae_mg_per_kg": 111.59893246558096
+          }
+        ]
+      },
+      "ridge_plus_description_keywords": {
+        "mae_mg_per_kg": 81.04533044799985,
+        "rmse_mg_per_kg": 150.16499269276784,
+        "r2": 0.4935260909755985,
+        "folds": [
+          {
+            "fold": 1,
+            "n": 31,
+            "mae_mg_per_kg": 70.18342224721819
+          },
+          {
+            "fold": 2,
+            "n": 31,
+            "mae_mg_per_kg": 40.5087110801362
+          },
+          {
+            "fold": 3,
+            "n": 32,
+            "mae_mg_per_kg": 54.86989157585073
+          },
+          {
+            "fold": 4,
+            "n": 32,
+            "mae_mg_per_kg": 143.70876468373024
+          },
+          {
+            "fold": 5,
+            "n": 29,
+            "mae_mg_per_kg": 95.72596848225506
+          }
+        ]
+      }
+    },
+    "rf_keyword_mae_delta_vs_original_mg_per_kg": 0.5974178947210333,
+    "interpretation": "A smaller MAE is not sufficient to conclude that real pile morphology causes fibre release. Single-study, post-hoc exploratory comparison.",
+    "warnings": [
+      "Hypothesis developed after inspecting earlier OOF errors; differences are exploratory, not a preregistered independent test.",
+      "Description terms may proxy sample identity or correlate with unmeasured confounders.",
+      "No hyperparameter search or deployment thresholds established."
+    ]
+  }
+}

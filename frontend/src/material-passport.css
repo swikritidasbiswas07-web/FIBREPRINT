@@ -1,0 +1,56 @@
+/* FIBREPRINT / compact material passport; intentionally self-contained */
+.mp-overlay{position:fixed;inset:0;z-index:9999;background:rgba(12,30,32,.76);display:grid;place-items:center;padding:22px;backdrop-filter:blur(5px)}
+.mp-dialog{width:min(1160px,100%);max-height:min(92vh,930px);overflow:auto;background:#f1ece2;color:#243b3c;box-shadow:0 24px 95px rgba(4,19,23,.32);font-family:'Lato',Arial,sans-serif;border:1px solid #bbcac1}
+.mp-dialog button{font-family:inherit;cursor:pointer}
+.mp-topline{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;border-bottom:1px solid #b6c7be;gap:16px;background:#e4e9df}
+.mp-topbrand{display:flex;align-items:center;gap:12px;font:700 12px 'Montserrat',sans-serif;letter-spacing:.09em}.mp-topbrand b{color:#60817c;font-weight:500}.mp-mark{display:grid;place-items:center;width:37px;height:37px;background:#184c59;color:#fff;font:700 16px 'League Spartan',sans-serif;letter-spacing:-.08em}
+.mp-top-actions{display:flex;align-items:center;gap:18px;font-size:10px;color:#52716b;letter-spacing:.12em;font-weight:800}.mp-icon-button{height:37px;width:37px;display:grid;place-items:center;background:transparent;border:1px solid #96b0a9;color:#21454b}.mp-icon-button:hover{background:#1b5260;color:#fff}
+.mp-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);min-height:600px}
+.mp-visual{display:flex;flex-direction:column;min-width:0;background:#103c44;color:#e9f1ec;border-right:1px solid #b7c7bf}
+.mp-image{position:relative;height:448px;overflow:hidden;background:#31515a}.mp-image>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}.mp-image.is-zoomed img{transform:scale(1.58);cursor:zoom-out}
+.mp-image:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,30,35,.34),transparent 28%,transparent 76%,rgba(10,30,35,.36))}
+.mp-image-corner{position:absolute;z-index:1;top:16px;left:18px;color:#eff4ef;font:700 10px 'Montserrat',sans-serif;letter-spacing:.14em;text-shadow:0 1px 9px #122}
+.mp-image-scope{position:absolute;z-index:1;bottom:19px;left:20px;display:flex;gap:14px;align-items:center;color:#f4f0e7;font:700 9px/1.6 'Montserrat',sans-serif;letter-spacing:.12em}.mp-crosshair{width:38px;height:38px;border:1px solid rgba(238,243,237,.66);display:grid;place-items:center;border-radius:50%;font-size:24px;font-weight:400}
+.mp-image-tools{display:flex;gap:4px;padding:11px 16px 8px}.mp-image-tools button{display:flex;gap:7px;align-items:center;border:1px solid #58828a;background:transparent;color:#edf1e9;padding:9px 12px;font-size:11px}.mp-image-tools button:hover{background:#235e69}
+.mp-photo-credit{display:flex;gap:9px;align-items:center;min-width:0;color:#c8dfdd;text-decoration:none;padding:8px 17px 13px;font-size:10px}.mp-photo-credit>span:first-child{white-space:nowrap;font-size:9px;letter-spacing:.12em;font-weight:800}.mp-credit-url{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.mp-photo-credit:hover{text-decoration:underline}
+.mp-visual-footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #447782;padding:13px 17px;font:700 10px 'Montserrat',sans-serif;letter-spacing:.08em}.mp-visual-footer>div{display:flex;align-items:center;gap:14px}.mp-visual-footer button{display:grid;place-items:center;width:32px;height:32px;border:1px solid #6a979d;background:transparent;color:#fff}.mp-visual-footer button:hover{background:#276d78}
+.mp-content{min-width:0;display:flex;flex-direction:column;padding:28px 32px 20px}
+.mp-id{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #b6c4bc;padding-bottom:12px;font:700 10px 'Montserrat',sans-serif;letter-spacing:.12em;color:#43717a}
+.mp-content h2{font:700 clamp(33px,3.1vw,51px)/.95 'League Spartan',sans-serif;letter-spacing:-.035em;margin:23px 0 8px;text-transform:none;color:#1b424b}.mp-lede{margin:0 0 20px;font:italic 18px/1.4 'Alice','Cambria',serif;color:#5c706a}
+.mp-tabs{display:flex;gap:4px;border-bottom:1px solid #a9bcb2}.mp-tabs button{display:flex;align-items:center;gap:8px;padding:12px 14px;border:0;border-bottom:3px solid transparent;background:transparent;color:#647a72;font-weight:800;font-size:12px}.mp-tabs button.active{border-color:#155c70;color:#124d5a}
+.mp-tab-panel{padding:19px 0 12px;min-height:220px}.mp-attributes{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid #b4c5bb;background:#e7e9df}.mp-attributes>div{padding:12px;border-right:1px solid #b4c5bb}.mp-attributes>div:last-child{border-right:0}.mp-attributes span,.mp-subhead{display:block;font:700 9px 'Montserrat',sans-serif;letter-spacing:.12em;color:#578078}.mp-attributes strong{display:block;margin-top:8px;text-transform:capitalize;font:700 15px 'League Spartan',sans-serif;color:#21484f}.mp-description{font-size:13px;line-height:1.6;margin:15px 0;color:#526661}.mp-subhead{margin:18px 0 9px}.mp-readiness-item{display:grid;grid-template-columns:125px 110px 1fr;gap:10px;border-top:1px solid #c7d1c7;padding:9px 2px;align-items:start;font-size:11px}.mp-readiness-item>span{color:#485f5c;font-weight:800}.mp-readiness-item strong{color:#1d5b69}.mp-readiness-item small{color:#667b72;line-height:1.5;font-size:11px}
+.mp-research ul{list-style:none;padding:0;margin:0}.mp-research li{display:grid;grid-template-columns:22px 1fr;gap:14px;padding:13px 0;border-top:1px solid #c2d0c5;font-size:13px;line-height:1.45}.mp-research li b{font:700 19px 'League Spartan',sans-serif;color:#166075}.mp-question{display:flex;gap:10px;padding:12px;background:#e0e9e2;font-size:12px;line-height:1.6;color:#345657}.mp-question svg{flex:0 0 auto}.mp-research a{display:inline-flex;gap:6px;align-items:center;color:#155d6d;font-size:12px;text-underline-offset:3px}
+.mp-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:14px}.mp-actions button{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:12px;padding:13px 16px}.mp-primary{border:1px solid #165465;background:#165465;color:#fff;flex:1}.mp-primary:hover{background:#0d3946}.mp-secondary{border:1px solid #9bb4aa;background:transparent;color:#1c5967}.mp-secondary:hover{background:#e1e8df}.mp-disclaimer{margin:11px 0 0;font-size:10px;display:flex;align-items:flex-start;gap:7px;color:#627a70;line-height:1.4}
+@media(max-width:900px){.mp-layout{grid-template-columns:1fr}.mp-image{height:min(360px,43vh)}.mp-content{padding:20px}.mp-visual-footer{padding-block:8px}.mp-tab-panel{min-height:0}.mp-dialog{max-height:94vh}}
+@media(max-width:560px){.mp-overlay{padding:8px}.mp-topbrand b,.mp-top-actions>span{display:none}.mp-image{height:250px}.mp-content h2{font-size:34px}.mp-id{font-size:8px}.mp-attributes strong{font-size:13px}.mp-attributes>div{padding:9px}.mp-readiness-item{grid-template-columns:1fr 1fr}.mp-readiness-item small{grid-column:1/-1}.mp-visual-footer>span{font-size:8px}.mp-actions button{width:100%;flex:1 1 100%}}
+@media(prefers-reduced-motion:reduce){.mp-image>img{transition:none}}
+
+
+/* v0.12 — compact instrument controls and accessible material records */
+.mp-dialog:focus{outline:none}
+.mp-dialog button:focus-visible,.mp-dialog a:focus-visible{outline:3px solid #b8d6d2;outline-offset:3px}
+.mp-content{padding:22px 28px 17px}
+.mp-id{padding-bottom:9px}
+.mp-content h2{margin:15px 0 5px;line-height:1.0}
+.mp-lede{margin:0 0 12px;font-size:17px}
+.mp-tabs button{padding:9px 12px}
+.mp-tab-panel{padding:13px 0 8px;min-height:0}
+.mp-attributes>div{padding:10px}
+.mp-attributes strong{margin-top:5px}
+.mp-description{margin:12px 0 10px}
+.mp-subhead{margin:12px 0 7px}
+.mp-readiness-item{grid-template-columns:122px 130px minmax(0,1fr);padding:8px 2px;align-items:center}
+.mp-readiness-status{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-size:11px;font-weight:700;color:#2a6570}
+.mp-status-dot{width:7px;height:7px;border-radius:50%;border:1px solid #af8b57;background:#eddbba;flex:0 0 auto}
+.mp-actions{padding-top:11px}
+.mp-disclaimer{margin-top:8px}
+.mp-keyhint{margin:8px 0 0;padding-top:7px;border-top:1px solid #c4cec5;font:700 9px 'Montserrat',sans-serif;letter-spacing:.1em;color:#6a827c}
+.mp-image{cursor:crosshair}
+.mp-image.is-zoomed img{transform:scale(1.6);transform-origin:var(--lens-x,50%) var(--lens-y,50%)}
+.mp-magnification{position:absolute;z-index:2;right:13px;bottom:13px;padding:7px 9px;background:rgba(8,44,52,.85);border:1px solid rgba(208,231,226,.35);color:#f1f4ee;font:700 10px 'Montserrat',sans-serif;letter-spacing:.06em;pointer-events:none}
+.mp-focus-guide{position:absolute;z-index:2;left:var(--lens-x,50%);top:var(--lens-y,50%);transform:translate(-50%,-50%);width:48px;height:48px;border:1px solid rgba(245,247,240,.8);border-radius:50%;box-shadow:0 0 0 1px rgba(9,34,39,.3);pointer-events:none}
+.mp-focus-guide:before,.mp-focus-guide:after{content:'';position:absolute;background:rgba(245,247,240,.85);top:50%;left:50%;transform:translate(-50%,-50%)}
+.mp-focus-guide:before{height:1px;width:15px}.mp-focus-guide:after{height:15px;width:1px}
+@media(max-width:900px){.mp-content{padding:18px}.mp-image{height:min(350px,42vh)}}
+@media(max-width:560px){.mp-content{padding:15px}.mp-readiness-item{grid-template-columns:1fr 1fr}.mp-readiness-item small{grid-column:1/-1}.mp-magnification{font-size:8px}.mp-keyhint{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.mp-image img{transition:none}}

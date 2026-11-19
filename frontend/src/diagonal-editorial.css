@@ -1,0 +1,418 @@
+/* FIBREPRINT v0.28 — Split/Tension. Import after page-experience.css.
+   Home-only composition: structural contrast, deliberate asymmetry, no gradients.
+   Preserves all routing, interactions, backend and research modules. */
+.fp-home-view { --editorial-slate:#143f43; --editorial-cream:#f4efe4; --editorial-accent:#bcd8d1; }
+.fp-home-view .hero {
+  position:relative; isolation:isolate; overflow:hidden;
+  width:100%; max-width:none;
+  min-height: min(830px,calc(100svh - 76px));
+  margin:0; padding: 27px clamp(26px,5.2vw,98px) 18px !important;
+  background:var(--editorial-cream) !important;
+  color:#172e30;
+}
+/* Dramatic solid split. The diagonal begins near the header and exits at the lower left. */
+.fp-home-view .hero::before {
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:var(--editorial-slate);
+  clip-path:polygon(66% 0, 100% 0,100% 100%,48% 100%);
+}
+.fp-home-view .hero::after {
+  content:""; position:absolute; z-index:-1; pointer-events:none;
+  width:clamp(180px,25vw,450px); aspect-ratio:1;
+  left:-11%; bottom:-40%; border:1px solid rgba(17,77,79,.14); border-radius:50%;
+  box-shadow:0 0 0 45px rgba(17,77,79,.025),0 0 0 92px rgba(17,77,79,.023);
+}
+.fp-home-view .hero-top {
+  position:relative; z-index:3; padding:0 0 0!important;
+  font-family:'Montserrat','Lato',sans-serif;
+  font-size:10px; letter-spacing:.19em;
+}
+.fp-home-view .hero-top span:last-child {color:#e8e9df;}
+.fp-home-view .hero-grid {
+  display:grid!important;
+  grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr)!important;
+  align-items:center; min-height:clamp(570px,74svh,810px)!important;
+  gap:clamp(10px,2.4vw,46px);
+}
+.fp-home-view .hero-copy {
+  position:relative; z-index:4;
+  padding:clamp(45px,8vh,90px) 0 clamp(25px,4vh,52px)!important;
+  justify-content:center; align-items:flex-start;
+}
+.fp-home-view .eyebrow {
+  margin-bottom:clamp(24px,5vh,55px); font-family:'Montserrat','Lato',sans-serif;
+  font-size:10px; letter-spacing:.22em;
+}
+.fp-home-view .eyebrow .mini-mark {width:27px;height:3px;vertical-align:middle;background:#0d6670;}
+.fp-home-view .hero h1 {
+  position:relative; z-index:5;
+  margin:0 0 clamp(28px,5vh,55px)!important;
+  max-width:none!important;
+  width: min(850px,118%);
+  font-family:'League Spartan',sans-serif;
+  font-size:clamp(72px,8.25vw,154px)!important;
+  letter-spacing:-.068em!important;
+  line-height:.80!important;
+  font-weight:800;
+  text-wrap:balance;
+}
+.fp-home-view .hero h1 em {
+  display:inline-block; margin-top:.12em;
+  font-family:'Alice',Cambria,Georgia,serif;
+  font-style:italic!important; font-weight:400!important;
+  letter-spacing:-.065em; color:#1d7781;
+  font-size:1.05em;
+}
+.fp-home-view .hero p {
+  margin:0 0 0 clamp(0px,5vw,80px);
+  border-left:2px solid #1f7379; padding-left:clamp(17px,2vw,29px);
+  font-size:clamp(16px,1.16vw,20px)!important;
+  max-width:470px!important; line-height:1.58!important;
+  color:#465856;
+}
+.fp-home-view .hero-buttons {margin:clamp(24px,3.6vh,42px) 0 0 clamp(0px,5vw,80px);gap:22px;}
+.fp-home-view .hero-buttons .primary {
+  min-height:57px; padding:17px 22px!important;
+  background:#0b5760; color:#f5f2e9; border:1px solid #0b5760;
+  letter-spacing:.03em; font-size:12px; transition:transform .25s,background .25s;
+}
+.fp-home-view .hero-buttons .primary:hover {transform:translateY(-3px);background:#0c6971;}
+.fp-home-view .hero-buttons .textbutton {font-size:12px;color:#1b4547}
+/* The art floats in the dark field instead of being a standard right-column rectangle. */
+.fp-home-view .hero-art {
+  position:relative; z-index:2;
+  width:100%; aspect-ratio: .90;
+  min-height:0!important; max-height: min(66vh,650px);
+  margin: 8px 0 6px;
+  border:8px solid rgba(243,237,224,.85);
+  border-radius:0!important;
+  overflow:hidden;
+  box-shadow:21px 23px 0 rgba(11,36,39,.24), 0 26px 72px rgba(8,31,34,.32)!important;
+  transform:rotate(2deg) translateX(-1.2%);
+}
+.fp-home-view .hero-art img {position:absolute;inset:0;min-height:100%!important;object-fit:cover;}
+.fp-home-view .hero-art .fp-hero-photo-label {
+  background:#e7ebe3;color:#153d43;bottom:0;left:0;right:0;
+  padding:13px 16px;letter-spacing:.12em;
+}
+.fp-home-view .hero-art .fp-hero-photo-label span {color:#52716c}
+.fp-home-view .hero-art .fp-photo-source.light {font-size:8px;position:absolute;bottom:0;left:0;right:0;}
+.fp-home-view .hero-art:has(.fp-photo-source.light) .fp-hero-photo-label {bottom:33px;}
+.fp-home-view .hero-foot {
+  position:relative; z-index:4; border-top:1px solid rgba(91,115,106,.55)!important;
+  padding:17px 0 0!important;
+  color:#173d41; font-family:'Montserrat','Lato',sans-serif;
+}
+.fp-home-view .hero-foot span:last-child {color:#eaf0e9}
+/* Hide the second content block on Home; visitors proceed to dedicated Atlas instead.
+   Existing workbench process remains available from its own page. */
+.fp-home-view .process {display:none!important}
+/* A responsive header with clear pace and no unnecessary decoration. */
+.fp-v27-header .nav button {padding:12px 10px;}
+.fp-v27-header .nav button.fp-nav-active {background:#153f44;color:#eff0e6;border-color:#153f44}
+@media(min-width:1450px){
+  .fp-home-view .hero{min-height:calc(100svh - 76px)}
+  .fp-home-view .hero h1{font-size:clamp(105px,8.1vw,160px)!important}
+}
+@media(max-width:1100px){
+  .fp-home-view .hero::before {clip-path:polygon(71% 0,100% 0,100% 100%,55% 100%)}
+  .fp-home-view .hero h1{font-size:clamp(64px,8.5vw,100px)!important}
+  .fp-home-view .hero p,.fp-home-view .hero-buttons{margin-left:0}
+  .fp-home-view .hero-art{max-height:520px}
+}
+@media(max-width:800px){
+  .fp-home-view .hero{padding:22px 6% 27px!important;min-height:0}
+  .fp-home-view .hero::before {clip-path:polygon(100% 39%,100% 100%,0 100%,0 82%)}
+  .fp-home-view .hero-top span:last-child{color:#1a4749}
+  .fp-home-view .hero-grid{grid-template-columns:1fr!important;min-height:0!important;gap:23px}
+  .fp-home-view .hero-copy{padding:46px 0 3px!important}
+  .fp-home-view .hero h1{width:100%;font-size:clamp(58px,12vw,112px)!important}
+  .fp-home-view .hero p{max-width:540px!important}
+  .fp-home-view .hero-art{width:min(80%,520px);max-height:480px;aspect-ratio:1.15;margin:25px auto 25px}
+  .fp-home-view .hero-foot span:last-child{color:#f0ece2}
+}
+@media(max-width:520px){
+  .fp-home-view .hero::before{clip-path:polygon(100% 56%,100% 100%,0 100%,0 83%)}
+  .fp-home-view .hero-top{font-size:8px}
+  .fp-home-view .hero-top span:last-child{display:none}
+  .fp-home-view .hero-copy{padding-top:35px!important}
+  .fp-home-view .hero h1{font-size:clamp(48px,12vw,68px)!important;letter-spacing:-.05em!important;line-height:.89!important}
+  .fp-home-view .hero h1 em{font-size:1em}
+  .fp-home-view .hero p{font-size:15px!important;padding-left:16px}
+  .fp-home-view .hero-buttons{flex-wrap:wrap;gap:15px}
+  .fp-home-view .hero-art{width:87%;aspect-ratio:1.05;border-width:5px;transform:rotate(1.4deg);margin-bottom:30px}
+  .fp-home-view .hero-foot{font-size:8px}
+  .fp-home-view .hero-foot span:last-child{display:none}
+}
+@media(prefers-reduced-motion:reduce){.fp-home-view .hero-buttons .primary{transition:none}.fp-home-view .hero-buttons .primary:hover{transform:none}}
+
+
+/* FIBREPRINT v0.29 — cinematic typographic rewrite; overrides v0.28 safely */
+.fp-home-view .hero {
+  min-height: min(760px, calc(100svh - 85px));
+  padding-block: 24px 28px !important;
+}
+.fp-home-view .hero-grid {
+  min-height: clamp(550px,73svh,750px) !important;
+  grid-template-columns: minmax(0, 1.09fr) minmax(0, .91fr) !important;
+}
+.fp-home-view .hero-copy {
+  padding: 28px 0 34px !important;
+  min-width:0;
+  justify-content:center;
+}
+.fp-home-view .hero .fp-type-headline {
+  width:min(900px,117%);
+  max-width:none !important;
+  margin: 0 0 clamp(24px,4vh,44px) !important;
+  font-size:inherit !important;
+  line-height:1 !important;
+  letter-spacing:0 !important;
+  text-wrap:initial;
+}
+.fp-home-view .fp-typed-line {
+  display:flex;
+  flex-wrap:nowrap;
+  width:max-content;
+  max-width:none;
+  white-space:nowrap;
+  align-items:baseline;
+  letter-spacing:-.065em;
+}
+.fp-home-view .fp-typed-first,
+.fp-home-view .fp-typed-second {
+  font-family:'League Spartan','Montserrat',sans-serif;
+  font-size:clamp(54px,6.5vw,114px);
+  font-weight:800;
+  line-height:.95;
+  color:#122f32;
+}
+.fp-home-view .fp-typed-second { margin-top:.045em; }
+.fp-home-view .fp-typed-third {
+  font-family:'Alice',Cambria,'Times New Roman',serif;
+  font-size:clamp(60px,7.1vw,127px);
+  font-style:italic;
+  font-weight:400;
+  letter-spacing:-.065em;
+  line-height:1.13;
+  color:#227f88;
+  margin-top:.03em;
+  margin-left:clamp(12px,2vw,34px);
+}
+.fp-home-view .fp-typed-glyph, .fp-home-view .fp-typed-space {
+  display:inline-block;
+  opacity:0;
+  transform: translate3d(0, .22em, 0) rotate(2deg) scale(.9);
+  animation:fp-letter-appear .36s cubic-bezier(.2,.8,.15,1.25) forwards;
+  animation-delay:var(--letter-delay);
+  will-change:transform,opacity;
+}
+.fp-home-view .fp-typed-space {width:.24em;}
+@keyframes fp-letter-appear {
+  0%{opacity:0;transform:translate3d(0,.22em,0) rotate(2deg) scale(.9);filter:blur(2px)}
+  70%{opacity:1;filter:blur(0)}
+  100%{opacity:1;transform:none;filter:blur(0)}
+}
+.fp-home-view .hero p {
+  margin-left:clamp(8px,3.7vw,64px) !important;
+  border:0 !important;
+  padding-left:0 !important;
+  max-width:470px !important;
+  font-size:clamp(15px,1.06vw,18px) !important;
+  line-height:1.65 !important;
+}
+.fp-home-view .hero-buttons {
+  margin-left:clamp(8px,3.7vw,64px) !important;
+}
+.fp-home-view .hero-art {
+  max-height:min(66vh,615px);
+  border:9px solid rgba(247,243,232,.94);
+  transform:translate3d(0,4px,0) rotate(3deg);
+  animation:fp-float-image 7s ease-in-out infinite;
+  box-shadow:0 32px 80px rgba(3,26,29,.29), 22px 23px 0 rgba(0,21,23,.18)!important;
+}
+@keyframes fp-float-image {
+  0%,100%{transform:translate3d(0,6px,0) rotate(3deg)}
+  50%{transform:translate3d(0,-12px,0) rotate(2.2deg)}
+}
+.fp-home-view .hero-art img {width:100%;height:100%;}
+/* No obsolete kicker lines or under-hero slogans. */
+.fp-home-view .hero-top,
+.fp-home-view .eyebrow,
+.fp-home-view .hero-foot { display:none !important; }
+@media (max-width:1200px) and (min-width:801px) {
+ .fp-home-view .fp-typed-first, .fp-home-view .fp-typed-second{font-size:clamp(43px,6.05vw,75px)}
+ .fp-home-view .fp-typed-third{font-size:clamp(49px,6.8vw,88px)}
+}
+@media (max-width:800px) {
+ .fp-home-view .hero-grid{grid-template-columns:1fr!important;min-height:0!important;}
+ .fp-home-view .hero-copy{padding:28px 0 8px!important;}
+ .fp-home-view .hero .fp-type-headline{width:100%;}
+ .fp-home-view .fp-typed-first,.fp-home-view .fp-typed-second{font-size:clamp(36px,9.8vw,79px);}
+ .fp-home-view .fp-typed-third{font-size:clamp(45px,11.5vw,94px);margin-left:6px;}
+ .fp-home-view .hero p,.fp-home-view .hero-buttons{margin-left:0!important;}
+ .fp-home-view .hero-art{max-height:425px;}
+}
+@media (max-width:450px) {
+ .fp-home-view .fp-typed-first,.fp-home-view .fp-typed-second{font-size:clamp(33px,9.2vw,43px);}
+ .fp-home-view .fp-typed-third{font-size:clamp(42px,11vw,54px);}
+ .fp-home-view .hero-art{width:86%;}
+}
+@media (prefers-reduced-motion:reduce) {
+ .fp-home-view .fp-typed-glyph,.fp-home-view .fp-typed-space{
+   animation:none!important;opacity:1!important;transform:none!important;filter:none!important;
+ }
+ .fp-home-view .hero-art{animation:none!important;transform:rotate(2deg)!important;}
+}
+
+
+/* =============================================================
+   FIBREPRINT v0.30 — ONE-SCREEN DISCOVERY / tactile interaction
+   Existing non-home routes and API logic are unchanged.
+   ============================================================= */
+:root { --fp-home-header:76px; }
+/* Home: all essential actions, including NEXT, within the viewport. */
+.site:has(.fp-home-view)>footer {display:none !important;}
+.fp-v27-main:has(.fp-home-view) {min-height:calc(100svh - var(--fp-home-header));}
+.fp-v27-main:has(.fp-home-view) .fp-route-transition {min-height:calc(100svh - var(--fp-home-header));}
+.fp-v27-main:has(.fp-home-view) .fp-page-foot {display:none !important;}
+.fp-v27-main:has(.fp-home-view) .fp-home-view {min-height:0!important;padding:0!important;}
+.fp-home-view .hero {
+  position:relative;
+  min-height:0!important;
+  height:calc(100svh - var(--fp-home-header));
+  max-height:none!important;
+  padding:clamp(18px,2.5vh,30px) clamp(23px,4.5vw,88px) clamp(72px,10vh,102px)!important;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.fp-home-view .hero-grid {
+  flex:1 1 auto; min-height:0!important;
+  height:100%;max-height:100%;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)!important;
+  gap:clamp(10px,2vw,42px)!important;
+  align-items:center;
+}
+.fp-home-view .hero-copy {
+  padding:0!important;
+  max-height:100%;
+  justify-content:center;
+}
+.fp-home-view .hero .fp-type-headline {
+  margin:0 0 clamp(14px,2.5vh,30px)!important;
+  width:112%;
+}
+.fp-home-view .fp-typed-first, .fp-home-view .fp-typed-second {
+  font-size:clamp(46px,min(6.35vw,11.5vh),106px)!important;
+  line-height:.89!important;
+}
+.fp-home-view .fp-typed-third {
+  font-size:clamp(50px,min(6.9vw,12.2vh),114px)!important;
+  line-height:1.01!important;
+  margin-top:.055em;
+}
+.fp-home-view .hero p {
+  margin-left:clamp(0px,2.9vw,48px)!important;
+  font-size:clamp(13px,min(1.05vw,2.25vh),18px)!important;
+  line-height:1.54!important;
+  max-width:480px!important;
+}
+.fp-home-view .hero-buttons {
+  margin:clamp(13px,2.3vh,24px) 0 0 clamp(0px,2.9vw,48px)!important;
+}
+.fp-home-view .hero-buttons .primary {min-height:46px!important;padding:12px 20px!important}
+.fp-home-view .hero-art {
+  width:min(100%,610px);
+  height:min(61svh,610px);
+  aspect-ratio:auto;
+  min-height:0!important;
+  max-height:min(61svh,610px)!important;
+  margin:0 0 0 auto!important;
+  transform-origin:center;
+  transition:box-shadow .32s ease;
+}
+.fp-home-view .hero-art:hover {
+  animation:none!important;
+  transform:translate3d(0,-9px,0) rotate(.4deg)!important;
+  box-shadow:0 45px 90px rgba(3,26,29,.34), 20px 25px 0 rgba(0,21,23,.15)!important;
+}
+/* A built-in next action, not a separate dark stripe below the fold. */
+.fp-home-view .fp-hero-next {
+  position:absolute;right:clamp(24px,4.5vw,88px);bottom:clamp(20px,3.2vh,36px);
+  z-index:10;display:flex;align-items:center;gap:clamp(16px,2.1vw,34px);
+  border:1px solid #b4d2c9;background:#eef4e9;color:#123d40;
+  padding:10px 12px 10px 18px;box-shadow:0 12px 30px rgba(4,27,30,.19);
+  transition:transform .22s ease,background .22s ease,box-shadow .22s ease;
+  text-align:left;
+}
+.fp-home-view .fp-hero-next:hover {transform:translateY(-4px);background:#fffdf5;box-shadow:0 18px 42px rgba(4,27,30,.26)}
+.fp-home-view .fp-hero-next:focus-visible {outline:3px solid #82c4cf;outline-offset:4px}
+.fp-home-view .fp-next-step {font:800 9px 'Montserrat','Lato',sans-serif;letter-spacing:.11em;display:flex;gap:6px;flex-direction:column;color:#537b79}
+.fp-home-view .fp-next-step b {font-size:13px;color:#1f5d63;letter-spacing:0}
+.fp-home-view .fp-hero-next strong {display:flex;align-items:center;gap:15px;font:800 13px 'Lato',sans-serif}
+/* Very fine woven-thread pattern across ivory, not an opaque overlay. */
+.fp-home-view .hero {
+  background-image:repeating-linear-gradient(90deg,transparent 0 42px,rgba(34,92,91,.035) 43px,transparent 44px),
+                   repeating-linear-gradient(0deg,transparent 0 42px,rgba(34,92,91,.03) 43px,transparent 44px)!important;
+  background-color:#f4efe4!important;
+}
+.fp-home-view .fp-fibre-pattern {position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;}
+.fp-home-view .fp-fibre-pattern span {
+  position:absolute;display:block;width:clamp(270px,33vw,550px);height:clamp(180px,22vw,355px);
+  border:1px solid rgba(30,115,118,.12);border-radius:48% 55% 50% 53%;
+  transform:rotate(-26deg);animation:fp-fibre-drift 15s ease-in-out infinite alternate;
+}
+.fp-home-view .fp-fibre-pattern span:nth-child(1){top:-24%;left:-15%;}
+.fp-home-view .fp-fibre-pattern span:nth-child(2){top:-16%;left:-11%;animation-delay:-3s;}
+.fp-home-view .fp-fibre-pattern span:nth-child(3){bottom:-25%;left:12%;animation-delay:-5s;opacity:.6;}
+.fp-home-view .fp-fibre-pattern span:nth-child(4){bottom:-29%;left:17%;animation-delay:-8s;opacity:.6;}
+@keyframes fp-fibre-drift{from{translate:-7px 4px;rotate:-2deg}to{translate:13px -7px;rotate:3deg}}
+/* Hover or touch each glyph to make it 'spring'. The opening reveal stays intact. */
+.fp-home-view .fp-typed-glyph {cursor:pointer;touch-action:manipulation;transform-origin:50% 80%;}
+.fp-home-view .fp-typed-glyph:hover {animation:fp-letter-wiggle .55s ease-in-out both!important;opacity:1!important;}
+.fp-home-view .fp-typed-glyph.fp-letter-tapped {animation:fp-letter-tap .65s cubic-bezier(.15,.95,.2,1) both!important;opacity:1!important;}
+@keyframes fp-letter-wiggle {
+  0%,100%{transform:translateY(0) rotate(0) scale(1)}
+  20%{transform:translateY(-7px) rotate(-7deg) scale(1.055)}
+  45%{transform:translateY(-3px) rotate(5deg) scale(1.03)}
+  70%{transform:translateY(-1px) rotate(-3deg) scale(1.012)}
+}
+@keyframes fp-letter-tap {
+  0%,100%{transform:translateY(0) rotate(0) scale(1)}
+  27%{transform:translateY(-12px) rotate(-9deg) scale(1.1)}
+  58%{transform:translateY(2px) rotate(6deg) scale(.99)}
+  78%{transform:translateY(-3px) rotate(-3deg) scale(1.03)}
+}
+@media (min-width:801px) and (max-height:760px){
+ .fp-home-view .hero {padding-bottom:70px!important}
+ .fp-home-view .fp-typed-first,.fp-home-view .fp-typed-second{font-size:clamp(44px,min(5.55vw,10.8vh),92px)!important}
+ .fp-home-view .fp-typed-third{font-size:clamp(48px,min(6.2vw,11.4vh),100px)!important}
+ .fp-home-view .hero-art{height:min(58svh,535px);max-height:58svh!important}
+ .fp-home-view .hero p{line-height:1.42!important}
+ .fp-home-view .hero-buttons{margin-top:12px!important}
+}
+/* Narrow screens can scroll naturally rather than clipping any content. */
+@media(max-width:800px){
+ :root{--fp-home-header:76px}
+ .fp-v27-main:has(.fp-home-view) .fp-route-transition{min-height:0}
+ .fp-home-view .hero{height:auto;min-height:calc(100svh - 76px)!important;padding:32px 6% 100px!important}
+ .fp-home-view .hero-grid{display:grid!important;grid-template-columns:1fr!important;height:auto;min-height:0!important}
+ .fp-home-view .hero-copy{padding:6px 0!important}
+ .fp-home-view .hero .fp-type-headline{width:100%}
+ .fp-home-view .fp-typed-first,.fp-home-view .fp-typed-second{font-size:clamp(38px,9.5vw,76px)!important}
+ .fp-home-view .fp-typed-third{font-size:clamp(46px,11.1vw,88px)!important}
+ .fp-home-view .hero-art{width:min(78%,500px);height:clamp(220px,35svh,420px);max-height:none!important;margin:8px auto 3px!important}
+ .fp-home-view .fp-hero-next{right:6%;bottom:22px}
+}
+@media(max-width:520px){
+ :root{--fp-home-header:70px}
+ .fp-home-view .hero{padding:20px 6% 96px!important}
+ .fp-home-view .fp-typed-first,.fp-home-view .fp-typed-second{font-size:clamp(33px,8.9vw,55px)!important}
+ .fp-home-view .fp-typed-third{font-size:clamp(42px,10.9vw,64px)!important}
+ .fp-home-view .hero-art{height:clamp(180px,27svh,330px);width:min(76%,420px)}
+ .fp-home-view .fp-hero-next{left:6%;right:6%;justify-content:space-between}
+}
+@media(prefers-reduced-motion:reduce){
+ .fp-home-view .fp-fibre-pattern span,.fp-home-view .fp-typed-glyph:hover,.fp-home-view .fp-typed-glyph.fp-letter-tapped{animation:none!important}
+ .fp-home-view .fp-typed-glyph{opacity:1!important;transform:none!important}
+ .fp-home-view .fp-hero-next,.fp-home-view .hero-art {transition:none!important}
+}

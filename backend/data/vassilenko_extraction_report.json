@@ -1,0 +1,29 @@
+{
+  "source_workbook": "data\\source_figshare_14675760_v4\\figshare_microfiber_data.xlsx",
+  "source_file_sha256": "a009362e4d1965936ddce76109628ad4fc47615c3df95e3d356fe6d3a4e34eca",
+  "source_doi": "10.1371/journal.pone.0250346",
+  "figshare": "https://doi.org/10.6084/m9.figshare.14675760.v4",
+  "sheet": "Laundry data master",
+  "fabric_rows_examined": 37,
+  "fabric_ids_with_mass_observations": 37,
+  "mass_observation_rows_extracted": 155,
+  "rows_by_wash_number": {
+    "1": 22,
+    "2": 22,
+    "3": 37,
+    "4": 37,
+    "5": 37
+  },
+  "skipped_cells": {
+    "missing_mass_measurement": 30
+  },
+  "quality_flags": [],
+  "mass_source_excel_columns": "Y:AC (25–29), mg/kg",
+  "count_source_excel_columns": "AF:AJ (32–36), fibres/kg",
+  "unavailable_from_workbook_columns": [
+    "temperature_c",
+    "water_fabric_ratio"
+  ],
+  "scientific_status": "UNVERIFIED_EXTRACTION; study-specific exploration only",
+  "important": "This file is not curated_observations.csv; do not pass it to the existing v0.13 trainer."
+}

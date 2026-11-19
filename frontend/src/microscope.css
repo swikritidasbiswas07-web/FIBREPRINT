@@ -1,0 +1,141 @@
+/* v0.4 — Under the Microscope | all illustrations are schematic and intentionally image-free. */
+.micro-section{padding:92px 5%;background:#ebe9df;color:#213a3b;scroll-margin-top:90px}
+.micro-kicker{color:#214b50}
+.micro-intro{display:flex;justify-content:space-between;align-items:end;gap:35px;padding:26px 0 36px}
+.micro-intro h2{font:800 clamp(76px,8.5vw,150px)/.83 'League Spartan',sans-serif;letter-spacing:-.025em;margin:18px 0 0}
+.micro-intro h2 em{font-style:normal;color:#2d7684}
+.micro-intro>p{max-width:440px;color:#526665;line-height:1.75;font-size:15px;margin-bottom:2px}
+.micro-eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.12em}
+.micro-shell{display:grid;grid-template-columns:minmax(180px,20%) minmax(0,1fr) minmax(215px,24%);border:1px solid #9daea6;min-height:540px;background:#f2f0e8}
+.micro-specimens{display:flex;flex-direction:column;border-right:1px solid #aab8b2;min-width:0}
+.micro-side-heading{padding:25px 18px 20px;font-size:10px;font-weight:800;letter-spacing:.12em;display:flex;flex-direction:column;gap:5px}
+.micro-side-heading span{font-weight:500;color:#74817a}
+.micro-specimen{color:#28454a;display:grid;grid-template-columns:28px 1fr 16px;align-items:center;text-align:left;gap:8px;border:0;border-top:1px solid #bfcbc2;background:transparent;padding:19px 14px;cursor:pointer;min-width:0}
+.micro-specimen:last-of-type{border-bottom:1px solid #bfcbc2}
+.micro-specimen:hover{background:#e4ebe5}.micro-specimen.is-active{background:#124c5a;color:#f1f0e8}
+.micro-specimen .micro-number{font:800 22px 'League Spartan',sans-serif}
+.micro-specimen strong{display:block;font-size:12px}.micro-specimen small{font-size:10px;display:block;line-height:1.6;opacity:.7}
+.micro-side-foot{margin-top:auto;padding:21px 18px;font-size:11px;line-height:1.6;color:#607271}
+.micro-stage{min-width:0;display:flex;flex-direction:column;background:#132d34;color:#e8eee8}
+.micro-stage-top{display:flex;justify-content:space-between;gap:10px;padding:17px 21px;align-items:center;font-size:10px;font-weight:800;letter-spacing:.12em;border-bottom:1px solid #42646b}
+.micro-stage-top span:first-child{display:flex;align-items:center;gap:9px}.micro-stage-top span:last-child{color:#a6c6c7}
+.micro-views{min-height:365px;flex:1;display:grid;grid-template-columns:1fr}
+.micro-views.is-comparing{grid-template-columns:1fr 1fr}
+.micro-picture{min-width:0;position:relative;overflow:hidden}
+.micro-picture+.micro-picture{border-left:2px solid #d7d3c1}
+.micro-svg{display:block;width:100%;height:100%;min-height:320px;object-fit:cover}
+.micro-compare-label{position:absolute;top:11px;left:11px;font-size:10px;font-weight:800;background:#e3e8dd;color:#193f47;padding:6px 9px}
+.micro-toolstrip{padding:13px 17px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;background:#173942;border-top:1px solid #52737a}
+.micro-zoom{display:flex;align-items:center;gap:8px;flex:1;min-width:210px}
+.micro-zoom label{font-size:11px;white-space:nowrap}.micro-zoom input{min-width:65px;width:100%;accent-color:#b7e0d9}.micro-zoom output{font-size:11px;white-space:nowrap}
+.micro-toggle{border:1px solid #71949a;background:transparent;color:#e6ede8;padding:10px 11px;display:flex;align-items:center;gap:6px;font-size:11px;cursor:pointer}
+.micro-toggle.active{background:#d6e8dc;color:#204b4f;border-color:#d6e8dc}
+.micro-select-compare{display:flex;align-items:center;gap:13px;padding:8px 18px 16px;font-size:11px}.micro-select-compare select{max-width:260px;padding:8px;background:#eaece2;color:#214249;border:0}
+.micro-notes{padding:26px 21px;display:flex;flex-direction:column;min-width:0}
+.micro-notes-meta,.micro-mini-label{font-size:10px;font-weight:800;letter-spacing:.12em}
+.micro-notes h3{font:800 clamp(38px,3.6vw,63px)/.92 'League Spartan',sans-serif;margin:30px 0 12px;overflow-wrap:anywhere}
+.micro-notes-sub{font-weight:700;color:#287587;font-size:12px}
+.micro-notes>p{font-size:13px;line-height:1.75;color:#566965;margin:20px 0}
+.micro-rule{height:1px;background:#a9b7ad;margin:12px 0 25px}
+.micro-notes ul{list-style:none;padding:0;margin:15px 0 25px}.micro-notes li{padding:10px 0 10px 15px;font-size:12px;line-height:1.55;border-bottom:1px solid #c2cbc2;position:relative}.micro-notes li:before{content:'+';position:absolute;left:0;font-weight:800;color:#2b8192}
+.micro-notice{display:flex;gap:10px;background:#e1e7dc;padding:13px;color:#3e5a55;font-size:11px;line-height:1.6;margin-top:auto}.micro-notice svg{flex-shrink:0}
+.micro-arrows{display:flex;align-items:center;justify-content:space-between;margin-top:28px;font-size:12px;font-weight:800}
+.micro-arrows button{border:1px solid #8aa29d;background:transparent;color:#214b53;display:grid;place-items:center;width:43px;height:39px;cursor:pointer}.micro-arrows button:hover{background:#124c5a;color:white}
+.micro-evidence{display:flex;gap:35px;justify-content:space-between;align-items:end;border-top:1px solid #94a7a2;padding-top:20px;margin-top:22px}
+.micro-evidence>div{max-width:770px}.micro-evidence span{font-size:10px;font-weight:800;letter-spacing:.12em}.micro-evidence p{font-size:12px;line-height:1.75;color:#55716e}
+.micro-evidence a{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;text-decoration:underline;text-underline-offset:5px;white-space:nowrap}
+@media(max-width:1150px){.micro-shell{grid-template-columns:185px minmax(0,1fr)}.micro-notes{grid-column:1/-1;border-top:1px solid #aab8b2;display:grid;grid-template-columns:1fr 1fr;column-gap:22px}.micro-notes h3,.micro-notes-sub,.micro-notes>p,.micro-rule,.micro-notes .micro-mini-label,.micro-notes ul,.micro-notice,.micro-arrows{grid-column:span 1}.micro-notes h3{margin-top:15px}.micro-notice{margin-top:10px}}
+@media(max-width:750px){.micro-intro{display:block}.micro-intro>p{margin-top:25px}.micro-shell{grid-template-columns:1fr}.micro-specimens{border-right:0;border-bottom:1px solid #aab8b2;display:grid;grid-template-columns:1fr 1fr}.micro-side-heading,.micro-side-foot{grid-column:1/-1}.micro-specimen{border-top:1px solid #bfcbc2}.micro-stage-top{font-size:9px}.micro-evidence{display:block}.micro-evidence a{margin-top:16px}.micro-notes{display:block}.micro-views.is-comparing .micro-svg{min-height:260px}.micro-views.is-comparing{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.micro-section{padding:65px 5%}.micro-intro h2{font-size:85px}.micro-specimen{padding:13px 9px;grid-template-columns:22px 1fr}.micro-specimen svg{display:none}.micro-svg{min-height:260px}.micro-views.is-comparing{grid-template-columns:1fr}.micro-picture+.micro-picture{border-left:0;border-top:2px solid #d7d3c1}.micro-toolstrip{padding:12px}.micro-zoom{width:100%}.micro-evidence a{white-space:normal}}
+
+/* v0.5 image integration: each photograph has a small clickable source URL below it. */
+.fp-photo-source{display:flex;gap:8px;align-items:center;padding:9px 11px;font-size:9px;line-height:1.4;letter-spacing:.025em;color:#42676a;border-top:1px solid #c8d3ce;background:#f2f1e9;max-width:100%;min-width:0;text-decoration:none}
+.fp-photo-source:hover{text-decoration:underline;text-underline-offset:3px;background:#e0e9e3}
+.fp-photo-source>span:first-child{white-space:nowrap;font-weight:800;font-size:8px;letter-spacing:.08em}
+.fp-source-url{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-width:0;flex:1}
+.fp-photo-source svg{flex:0 0 auto}
+.fp-photo-source.light{position:absolute;bottom:0;left:0;right:0;z-index:3;color:#e4eded;background:rgba(6,37,44,.91);border-color:rgba(220,239,237,.25)}
+.fp-photo-source.light:hover{background:#072d38}
+.fp-hero-photo>img{width:100%;height:100%;min-height:590px;display:block;object-fit:cover;position:absolute;inset:0}
+.fp-hero-photo{background:#38616b}
+.fp-hero-photo:before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 55%,rgba(6,35,39,.5) 100%);pointer-events:none}
+.fp-hero-photo-label{position:absolute;z-index:2;left:24px;bottom:61px;color:white;font-size:10px;letter-spacing:.13em;font-weight:800;display:flex;gap:12px;align-items:center}
+.fp-hero-photo-label span{opacity:.8;font-weight:500}
+.fp-textile-atlas{padding:90px 5% 100px;background:#eae5da;color:#223d3d;scroll-margin-top:80px}
+.fp-atlas-heading{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+.fp-atlas-heading h2{font:800 clamp(68px,7vw,112px)/.87 'League Spartan',sans-serif;letter-spacing:-.025em;margin:23px 0 0}
+.fp-atlas-heading h2 em{font-style:normal;color:#217285}
+.fp-atlas-heading p{max-width:410px;font-size:14px;line-height:1.75;color:#5a6560}
+.fp-atlas-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.fp-atlas-card{border:1px solid #bac7bf;background:#f5f2e9;min-width:0;overflow:hidden}
+.fp-atlas-img{position:relative;aspect-ratio:4/5;background:repeating-linear-gradient(45deg,#c5d2ca 0 10px,#b2c5bf 10px 20px);overflow:hidden}
+.fp-atlas-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.fp-atlas-card:hover .fp-atlas-img img{transform:scale(1.035)}
+.fp-atlas-img>span{position:absolute;left:13px;top:13px;color:#fff;font:800 12px 'Lato',sans-serif;background:#0b4857;padding:7px 10px}
+.fp-atlas-description{padding:18px 15px 20px;display:flex;gap:10px;justify-content:space-between;align-items:end}
+.fp-atlas-description small{letter-spacing:.1em;font-size:9px;color:#628081}
+.fp-atlas-description h3{font:800 31px/.95 'League Spartan',sans-serif;text-transform:uppercase;margin:9px 0}
+.fp-atlas-description p{font-size:11px;line-height:1.5;color:#5b6a65;margin:0}
+.fp-atlas-description button{flex:0 0 36px;width:36px;height:36px;display:grid;place-items:center;border:1px solid #748d89;background:#e2e9e2;color:#174b54;cursor:pointer}
+.fp-atlas-description button:hover{background:#135668;color:white}
+.fp-atlas-caveat{margin:16px 0 0;font-size:10px;line-height:1.5;color:#5a6964}
+.fp-micro-mode{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:0 0 17px}
+.fp-micro-mode button{font-size:11px;padding:12px 16px;cursor:pointer;background:transparent;color:#24535a;border:1px solid #9baca3;font-weight:800}
+.fp-micro-mode button.selected{background:#174f5b;color:#f8f6ed;border-color:#174f5b}
+.fp-micro-mode p{margin:0 0 0 auto;font-size:11px;color:#5b6b69;max-width:470px;line-height:1.5}
+.fp-micrograph-shell{display:flex;flex-direction:column;width:100%;height:100%;min-height:320px;background:#132d34}
+.fp-micrograph-viewport{position:relative;flex:1;min-height:300px;overflow:hidden;background:repeating-linear-gradient(45deg,#1b383d 0 11px,#28464c 11px 22px)}
+.fp-micrograph-viewport>img{width:100%;height:100%;position:absolute;inset:0;object-fit:contain;transform-origin:center;transition:transform .17s ease}
+.fp-micrograph-tag{position:absolute;top:13px;left:13px;background:rgba(12,47,53,.85);color:#d6edeb;font-size:9px;font-weight:800;letter-spacing:.08em;padding:8px 10px}
+.fp-image-missing:after{content:'Image not found — check filename in public/images/microscopy';color:#e9e9df;position:absolute;left:8%;top:48%;font-size:12px;max-width:80%}
+.micro-photo-credit{color:#c9e5e2;background:#183a42;border-color:#406269;max-width:100%}
+.micro-photo-credit:hover{background:#234d56}
+@media(max-width:1100px){.fp-atlas-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fp-micro-mode p{width:100%;max-width:none;margin:4px 0 0}}
+@media(max-width:660px){.fp-atlas-heading{display:block}.fp-atlas-grid{gap:10px}.fp-atlas-description h3{font-size:25px}.fp-textile-atlas{padding:65px 5%}.fp-source-url{font-size:8px}.fp-photo-source>span:first-child{display:none}.fp-hero-photo-label{bottom:55px}.fp-micrograph-viewport{min-height:260px}.fp-micrograph-shell{min-height:280px}}
+
+
+/* v0.6 — calmer natural typography in the microscope interface. */
+.micro-intro h2,.micro-notes h3{
+  font-family:'League Spartan','Arial Narrow',sans-serif;
+  font-weight:700;
+  letter-spacing:-.035em;
+  line-height:.99;
+}
+.micro-intro h2{font-size:clamp(65px,7.8vw,127px)}
+.micro-notes h3{font-size:clamp(36px,3.4vw,58px)}
+.micro-specimen .micro-number{font-weight:600}
+.micro-stage,.micro-notes,.micro-evidence,.micro-specimens{font-family:'Lato','Segoe UI',sans-serif}
+@media(max-width:480px){.micro-intro h2{font-size:clamp(60px,13vw,80px)}}
+
+/* v0.9: keep the observatory compact and readable. */
+.micro-section{padding:36px 5% 46px!important}
+.micro-intro{padding:10px 0 18px!important;gap:20px!important}
+.micro-intro h2{font-size:clamp(42px,4.8vw,72px)!important;line-height:.98!important;margin:8px 0 0!important}
+.micro-intro>p{font-size:13px!important;line-height:1.5!important;max-width:470px!important}
+.fp-micro-mode{margin-bottom:10px!important}
+.fp-micro-mode button{padding:9px 12px!important}
+.micro-shell{min-height:390px!important;grid-template-columns:minmax(170px,20%) minmax(0,1fr) minmax(190px,23%)!important}
+.micro-side-heading{padding:15px 13px!important}
+.micro-specimen{padding:12px 11px!important}
+.micro-specimen .micro-number{font-size:19px!important}
+.micro-stage-top{padding:10px 14px!important}
+.micro-views{min-height:280px!important}
+.micro-svg{min-height:280px!important}
+.micro-notes{padding:18px 16px!important}
+.micro-notes h3{font-size:clamp(30px,2.9vw,45px)!important;margin:10px 0 8px!important}
+.micro-notes>p{font-size:12px!important;line-height:1.5!important;margin:10px 0!important}
+.micro-rule{margin:9px 0 12px!important}
+.micro-notes ul{margin:8px 0 12px!important}
+.micro-notes li{padding:7px 0 7px 15px!important;font-size:11px!important}
+.micro-notice{padding:10px!important;font-size:10px!important}
+.micro-arrows{margin-top:12px!important}
+.micro-evidence{margin-top:12px!important;padding-top:12px!important}
+@media(max-width:1100px){.micro-shell{grid-template-columns:180px minmax(0,1fr)!important}.micro-notes{grid-column:1/-1!important}}
+@media(max-width:750px){.micro-shell{grid-template-columns:1fr!important}.micro-intro{display:block!important}.micro-views{min-height:260px!important}}
+
+/* v1.0 typography alignment */
+.micro-section,.micro-stage,.micro-notes,.micro-specimens,.micro-evidence{font-family:'Lato','Segoe UI',sans-serif!important}
+.micro-intro h2{font-family:'League Spartan','Montserrat',sans-serif!important;font-weight:700!important;font-size:clamp(42px,4.8vw,72px)!important;line-height:.96!important}
+.micro-intro h2 em{font-family:'Alice',Cambria,'Times New Roman',serif!important;font-style:italic!important;font-weight:400!important}
+.micro-notes h3{font-family:'Alice',Cambria,'Times New Roman',serif!important;font-size:clamp(28px,3vw,44px)!important;font-weight:400!important}
+.micro-specimen .micro-number,.micro-arrows,.micro-stage-top{font-family:'Montserrat','Lato',sans-serif!important}

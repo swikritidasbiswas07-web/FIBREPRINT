@@ -1,0 +1,497 @@
+{
+  "study": "Vassilenko et al. (2021)",
+  "doi": "10.1371/journal.pone.0250346",
+  "status": "RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "data_status": "EXTRACTED_UNVERIFIED",
+  "created_utc": "2026-11-18T17:31:04.574430+00:00",
+  "input_csv": "data\\vassilenko_extracted_washes.csv",
+  "rows": 155,
+  "distinct_fabrics": 37,
+  "input_features": [
+    "fabric_type",
+    "yarn_type",
+    "construction",
+    "mechanical_finishing",
+    "mechanical_presence",
+    "density_gsm",
+    "wash_number",
+    "polyester_pct",
+    "cotton_pct",
+    "nylon_pct",
+    "elastane_pct",
+    "polyurethane_pct",
+    "spandex_pct",
+    "polyamide_pct",
+    "wool_pct"
+  ],
+  "grouping": "GroupKFold(5) by fabric_id; repeated washes stay in one fold",
+  "model": "RandomForestRegressor(250 trees, min_samples_leaf=2, random_state=42) on log1p target",
+  "baseline": "Median calculated exclusively from the training folds",
+  "overall": {
+    "n": 155,
+    "model_mae_mg_per_kg": 94.94953597202135,
+    "baseline_mae_mg_per_kg": 125.03935483870967,
+    "model_rmse_mg_per_kg": 190.4119597897051,
+    "baseline_rmse_mg_per_kg": 218.6470703092971,
+    "mae_improvement_pct": 24.064278726886965,
+    "model_better_than_baseline": true,
+    "model_r2": 0.18565557982013847
+  },
+  "by_fold": [
+    {
+      "fold": 1,
+      "training_fabrics": 30,
+      "held_out_fabrics": 7,
+      "n": 31,
+      "model_mae_mg_per_kg": 88.31111402494996,
+      "baseline_mae_mg_per_kg": 92.86774193548388,
+      "model_rmse_mg_per_kg": 132.43193863410977,
+      "baseline_rmse_mg_per_kg": 133.75958090496158,
+      "mae_improvement_pct": 4.906577693791083,
+      "model_better_than_baseline": true,
+      "model_r2": -0.31439266037771496
+    },
+    {
+      "fold": 2,
+      "training_fabrics": 30,
+      "held_out_fabrics": 7,
+      "n": 31,
+      "model_mae_mg_per_kg": 46.45816115397812,
+      "baseline_mae_mg_per_kg": 76.59032258064516,
+      "model_rmse_mg_per_kg": 78.64277245378177,
+      "baseline_rmse_mg_per_kg": 111.40025916457954,
+      "mae_improvement_pct": 39.34199571354414,
+      "model_better_than_baseline": true,
+      "model_r2": 0.4816154377011429
+    },
+    {
+      "fold": 3,
+      "training_fabrics": 29,
+      "held_out_fabrics": 8,
+      "n": 32,
+      "model_mae_mg_per_kg": 56.42159428948711,
+      "baseline_mae_mg_per_kg": 73.253125,
+      "model_rmse_mg_per_kg": 73.8083133032858,
+      "baseline_rmse_mg_per_kg": 93.96579996200747,
+      "mae_improvement_pct": 22.97721866543289,
+      "model_better_than_baseline": true,
+      "model_r2": 0.38115000595189097
+    },
+    {
+      "fold": 4,
+      "training_fabrics": 29,
+      "held_out_fabrics": 8,
+      "n": 32,
+      "model_mae_mg_per_kg": 144.57803653776932,
+      "baseline_mae_mg_per_kg": 197.7875,
+      "model_rmse_mg_per_kg": 249.9704425543441,
+      "baseline_rmse_mg_per_kg": 304.88686836267647,
+      "mae_improvement_pct": 26.902338854695405,
+      "model_better_than_baseline": true,
+      "model_r2": 0.2091022811290918
+    },
+    {
+      "fold": 5,
+      "training_fabrics": 30,
+      "held_out_fabrics": 7,
+      "n": 29,
+      "model_mae_mg_per_kg": 141.6324951256667,
+      "baseline_mae_mg_per_kg": 188.08965517241376,
+      "model_rmse_mg_per_kg": 305.7228999718501,
+      "baseline_rmse_mg_per_kg": 332.88315232743196,
+      "mae_improvement_pct": 24.69947643008955,
+      "model_better_than_baseline": true,
+      "model_r2": 0.08750394699793362
+    }
+  ],
+  "by_wash": {
+    "1": {
+      "distinct_fabrics": 22,
+      "n": 22,
+      "model_mae_mg_per_kg": 160.1166536287483,
+      "baseline_mae_mg_per_kg": 181.06363636363633,
+      "model_rmse_mg_per_kg": 220.48214139078766,
+      "baseline_rmse_mg_per_kg": 262.7478241411508,
+      "mae_improvement_pct": 11.568851236821223,
+      "model_better_than_baseline": true,
+      "model_r2": -0.13048328057105052
+    },
+    "2": {
+      "distinct_fabrics": 22,
+      "n": 22,
+      "model_mae_mg_per_kg": 126.10345601321697,
+      "baseline_mae_mg_per_kg": 158.10909090909092,
+      "model_rmse_mg_per_kg": 263.83210044109444,
+      "baseline_rmse_mg_per_kg": 297.5398720416231,
+      "mae_improvement_pct": 20.242754361465817,
+      "model_better_than_baseline": true,
+      "model_r2": 0.09557018361506608
+    },
+    "3": {
+      "distinct_fabrics": 37,
+      "n": 37,
+      "model_mae_mg_per_kg": 89.1814116101864,
+      "baseline_mae_mg_per_kg": 120.65945945945946,
+      "model_rmse_mg_per_kg": 203.43142025800964,
+      "baseline_rmse_mg_per_kg": 229.18023474985793,
+      "mae_improvement_pct": 26.088338196019688,
+      "model_better_than_baseline": true,
+      "model_r2": 0.1806177930678623
+    },
+    "4": {
+      "distinct_fabrics": 37,
+      "n": 37,
+      "model_mae_mg_per_kg": 75.46564800452583,
+      "baseline_mae_mg_per_kg": 104.7108108108108,
+      "model_rmse_mg_per_kg": 155.1877535666989,
+      "baseline_rmse_mg_per_kg": 178.94151467917015,
+      "mae_improvement_pct": 27.929458839856075,
+      "model_better_than_baseline": true,
+      "model_r2": 0.2354532077119903
+    },
+    "5": {
+      "distinct_fabrics": 37,
+      "n": 37,
+      "model_mae_mg_per_kg": 62.92957994042489,
+      "baseline_mae_mg_per_kg": 96.77297297297295,
+      "model_rmse_mg_per_kg": 126.98751542209679,
+      "baseline_rmse_mg_per_kg": 148.4549563135366,
+      "mae_improvement_pct": 34.97194722125562,
+      "model_better_than_baseline": true,
+      "model_r2": 0.26353883829036906
+    }
+  },
+  "wash_coverage": {
+    "possible_if_all_fabrics_have_all_5_washes": 185,
+    "observed": 155,
+    "unobserved": 30,
+    "observations_by_wash": {
+      "1": 22,
+      "2": 22,
+      "3": 37,
+      "4": 37,
+      "5": 37
+    },
+    "note": "Unobserved means absent from the extracted MASS columns; cause must be checked against source."
+  },
+  "target_distribution_mg_per_kg": {
+    "min": 9.6,
+    "median": 110.8,
+    "p90": 374.2799999999999,
+    "p95": 632.1399999999998,
+    "max": 1239.6
+  },
+  "worst_10_fabrics": [
+    {
+      "fabric_id": "vassilenko_row_12",
+      "description": "Soft double velour recycled fleece",
+      "wash_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "observed_mean_mg_per_kg": 840.36,
+      "model_mae_mg_per_kg": 670.8035499445999,
+      "baseline_mae_mg_per_kg": 727.1599999999999
+    },
+    {
+      "fabric_id": "vassilenko_row_21",
+      "description": "Cotton faced fleece",
+      "wash_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "observed_mean_mg_per_kg": 815.76,
+      "model_mae_mg_per_kg": 592.9948070730941,
+      "baseline_mae_mg_per_kg": 702.76
+    },
+    {
+      "fabric_id": "vassilenko_row_16",
+      "description": "Recycled polyester fleece",
+      "wash_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "observed_mean_mg_per_kg": 295.52,
+      "model_mae_mg_per_kg": 211.97325380557012,
+      "baseline_mae_mg_per_kg": 207.21999999999997
+    },
+    {
+      "fabric_id": "vassilenko_row_13",
+      "description": "Brown high pile jersey",
+      "wash_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "observed_mean_mg_per_kg": 371.76000000000005,
+      "model_mae_mg_per_kg": 181.94947799293163,
+      "baseline_mae_mg_per_kg": 258.76000000000005
+    },
+    {
+      "fabric_id": "vassilenko_row_30",
+      "description": "Spun polyester plaid",
+      "wash_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "observed_mean_mg_per_kg": 206.72000000000003,
+      "model_mae_mg_per_kg": 140.2406870984425,
+      "baseline_mae_mg_per_kg": 118.41999999999999
+    },
+    {
+      "fabric_id": "vassilenko_row_33",
+      "description": "2L Waterproof breathable PU",
+      "wash_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "observed_mean_mg_per_kg": 30.96,
+      "model_mae_mg_per_kg": 109.4270034984986,
+      "baseline_mae_mg_per_kg": 82.44000000000001
+    },
+    {
+      "fabric_id": "vassilenko_row_28",
+      "description": "Laminated waterproof breathable membrane with brushed backer",
+      "wash_numbers": [
+        3,
+        4,
+        5
+      ],
+      "n": 3,
+      "observed_mean_mg_per_kg": 29.400000000000002,
+      "model_mae_mg_per_kg": 108.43785600135318,
+      "baseline_mae_mg_per_kg": 58.90000000000001
+    },
+    {
+      "fabric_id": "vassilenko_row_14",
+      "description": "Green shaggy fleece",
+      "wash_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "observed_mean_mg_per_kg": 267.2,
+      "model_mae_mg_per_kg": 99.07762381194371,
+      "baseline_mae_mg_per_kg": 153.8
+    },
+    {
+      "fabric_id": "vassilenko_row_29",
+      "description": "Cotton yarn dyed plaid",
+      "wash_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "observed_mean_mg_per_kg": 270.04,
+      "model_mae_mg_per_kg": 93.18134333178782,
+      "baseline_mae_mg_per_kg": 165.34000000000003
+    },
+    {
+      "fabric_id": "vassilenko_row_39",
+      "description": "Sanded single jersey",
+      "wash_numbers": [
+        3,
+        4,
+        5
+      ],
+      "n": 3,
+      "observed_mean_mg_per_kg": 178.0666666666667,
+      "model_mae_mg_per_kg": 88.6947813617406,
+      "baseline_mae_mg_per_kg": 90.86666666666667
+    }
+  ],
+  "worst_12_observations": [
+    {
+      "fabric_id": "vassilenko_row_12",
+      "source_excel_row": 12,
+      "description": "Soft double velour recycled fleece",
+      "wash_number": 2,
+      "fold": 5,
+      "measured_mg_per_kg": 1239.6,
+      "predicted_mg_per_kg": 187.70564450091453,
+      "median_baseline_mg_per_kg": 113.2,
+      "absolute_error_mg_per_kg": 1051.8943554990853,
+      "baseline_absolute_error_mg_per_kg": 1126.3999999999999,
+      "residual_mg_per_kg": 1051.8943554990853
+    },
+    {
+      "fabric_id": "vassilenko_row_12",
+      "source_excel_row": 12,
+      "description": "Soft double velour recycled fleece",
+      "wash_number": 3,
+      "fold": 5,
+      "measured_mg_per_kg": 1125.8,
+      "predicted_mg_per_kg": 151.85003239026133,
+      "median_baseline_mg_per_kg": 113.2,
+      "absolute_error_mg_per_kg": 973.9499676097387,
+      "baseline_absolute_error_mg_per_kg": 1012.5999999999999,
+      "residual_mg_per_kg": 973.9499676097387
+    },
+    {
+      "fabric_id": "vassilenko_row_21",
+      "source_excel_row": 21,
+      "description": "Cotton faced fleece",
+      "wash_number": 4,
+      "fold": 4,
+      "measured_mg_per_kg": 901.2,
+      "predicted_mg_per_kg": 210.91355380246222,
+      "median_baseline_mg_per_kg": 113.0,
+      "absolute_error_mg_per_kg": 690.2864461975378,
+      "baseline_absolute_error_mg_per_kg": 788.2,
+      "residual_mg_per_kg": 690.2864461975378
+    },
+    {
+      "fabric_id": "vassilenko_row_21",
+      "source_excel_row": 21,
+      "description": "Cotton faced fleece",
+      "wash_number": 3,
+      "fold": 4,
+      "measured_mg_per_kg": 874.8,
+      "predicted_mg_per_kg": 237.53167789359637,
+      "median_baseline_mg_per_kg": 113.0,
+      "absolute_error_mg_per_kg": 637.2683221064036,
+      "baseline_absolute_error_mg_per_kg": 761.8,
+      "residual_mg_per_kg": 637.2683221064036
+    },
+    {
+      "fabric_id": "vassilenko_row_21",
+      "source_excel_row": 21,
+      "description": "Cotton faced fleece",
+      "wash_number": 1,
+      "fold": 4,
+      "measured_mg_per_kg": 798.4,
+      "predicted_mg_per_kg": 241.46637723160117,
+      "median_baseline_mg_per_kg": 113.0,
+      "absolute_error_mg_per_kg": 556.9336227683988,
+      "baseline_absolute_error_mg_per_kg": 685.4,
+      "residual_mg_per_kg": 556.9336227683988
+    },
+    {
+      "fabric_id": "vassilenko_row_21",
+      "source_excel_row": 21,
+      "description": "Cotton faced fleece",
+      "wash_number": 5,
+      "fold": 4,
+      "measured_mg_per_kg": 739.0,
+      "predicted_mg_per_kg": 184.6431835511234,
+      "median_baseline_mg_per_kg": 113.0,
+      "absolute_error_mg_per_kg": 554.3568164488765,
+      "baseline_absolute_error_mg_per_kg": 626.0,
+      "residual_mg_per_kg": 554.3568164488765
+    },
+    {
+      "fabric_id": "vassilenko_row_21",
+      "source_excel_row": 21,
+      "description": "Cotton faced fleece",
+      "wash_number": 2,
+      "fold": 4,
+      "measured_mg_per_kg": 765.4,
+      "predicted_mg_per_kg": 239.271172155746,
+      "median_baseline_mg_per_kg": 113.0,
+      "absolute_error_mg_per_kg": 526.1288278442539,
+      "baseline_absolute_error_mg_per_kg": 652.4,
+      "residual_mg_per_kg": 526.1288278442539
+    },
+    {
+      "fabric_id": "vassilenko_row_12",
+      "source_excel_row": 12,
+      "description": "Soft double velour recycled fleece",
+      "wash_number": 4,
+      "fold": 5,
+      "measured_mg_per_kg": 640.4,
+      "predicted_mg_per_kg": 132.27816690693172,
+      "median_baseline_mg_per_kg": 113.2,
+      "absolute_error_mg_per_kg": 508.1218330930683,
+      "baseline_absolute_error_mg_per_kg": 527.1999999999999,
+      "residual_mg_per_kg": 508.1218330930683
+    },
+    {
+      "fabric_id": "vassilenko_row_16",
+      "source_excel_row": 16,
+      "description": "Recycled polyester fleece",
+      "wash_number": 1,
+      "fold": 1,
+      "measured_mg_per_kg": 576.8,
+      "predicted_mg_per_kg": 96.8227872314768,
+      "median_baseline_mg_per_kg": 88.30000000000001,
+      "absolute_error_mg_per_kg": 479.97721276852315,
+      "baseline_absolute_error_mg_per_kg": 488.49999999999994,
+      "residual_mg_per_kg": 479.97721276852315
+    },
+    {
+      "fabric_id": "vassilenko_row_12",
+      "source_excel_row": 12,
+      "description": "Soft double velour recycled fleece",
+      "wash_number": 5,
+      "fold": 5,
+      "measured_mg_per_kg": 567.4,
+      "predicted_mg_per_kg": 133.06682840801747,
+      "median_baseline_mg_per_kg": 113.2,
+      "absolute_error_mg_per_kg": 434.3331715919825,
+      "baseline_absolute_error_mg_per_kg": 454.2,
+      "residual_mg_per_kg": 434.3331715919825
+    },
+    {
+      "fabric_id": "vassilenko_row_12",
+      "source_excel_row": 12,
+      "description": "Soft double velour recycled fleece",
+      "wash_number": 1,
+      "fold": 5,
+      "measured_mg_per_kg": 628.6,
+      "predicted_mg_per_kg": 242.881578070875,
+      "median_baseline_mg_per_kg": 113.2,
+      "absolute_error_mg_per_kg": 385.71842192912504,
+      "baseline_absolute_error_mg_per_kg": 515.4,
+      "residual_mg_per_kg": 385.71842192912504
+    },
+    {
+      "fabric_id": "vassilenko_row_29",
+      "source_excel_row": 29,
+      "description": "Cotton yarn dyed plaid",
+      "wash_number": 1,
+      "fold": 2,
+      "measured_mg_per_kg": 539.2,
+      "predicted_mg_per_kg": 214.8142108913012,
+      "median_baseline_mg_per_kg": 104.7,
+      "absolute_error_mg_per_kg": 324.3857891086989,
+      "baseline_absolute_error_mg_per_kg": 434.50000000000006,
+      "residual_mg_per_kg": 324.3857891086989
+    }
+  ],
+  "warnings": [
+    "Exploratory within-one-study validation only; not calibrated for general laundry.",
+    "Extraction and missingness have not been manually source-verified.",
+    "Per-wash subsets and worst-fabric rankings are descriptive; small subsets are unstable.",
+    "No invented temperature or water-to-fabric ratio inputs are used.",
+    "No uncertainty intervals or deployment calibration are established."
+  ]
+}

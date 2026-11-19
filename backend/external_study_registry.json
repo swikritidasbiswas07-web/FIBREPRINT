@@ -1,0 +1,12 @@
+{
+  "registry_version":"v0.23",
+  "scientific_status":"RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "training_study":{"id":"vassilenko_2021","title":"Domestic laundry and microfiber pollution: Exploring fiber shedding from consumer apparel textiles","doi":"10.1371/journal.pone.0250346","published":2021,"role":"training_and_internal_evaluation","status":"155_EXTRACTED_MASS_RECORDS_STRUCTURALLY_AUDITED"},
+  "external_candidates":[
+    {"id":"hazlehurst_2023","title":"Quantification of microfibre release from textiles during domestic laundering","doi":"10.1007/s11356-023-25246-8","year":2023,"reported_measure":"released microfibre mass in mg/kg textile","evidence":"Article reports individual fabric differences and protocol effects; examples 180±11 to 2412±222 mg/kg","raw_individual_observations_acquired":false,"protocol_harmonised":false,"candidate_role":"PRIORITY_FOR_MANUAL_DATA_ACQUISITION","caution":"Published values include summaries; no verified row-level external dataset in the project yet"},
+    {"id":"lant_2020","title":"Microfiber release from real soiled consumer laundry and the impact of fabric care products and washing conditions","doi":"10.1371/journal.pone.0233332","year":2020,"reported_measure":"mass released per kg laundry (ppm equivalent to mg/kg)","evidence":"79 household wash loads; mean 114±66.8 mg/kg, study-level summary","raw_individual_observations_acquired":false,"protocol_harmonised":false,"candidate_role":"CONTEXTUAL_CROSS_STUDY_COMPARISON","caution":"Mixed household wash loads are not one-fabric-per-specimen targets"},
+    {"id":"jeans_2021","title":"Evaluation of microfiber release from jeans: the impact of different washing conditions","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC8536618/","year":2021,"reported_measure":"microfibre counts and washing-condition comparisons","raw_individual_observations_acquired":false,"protocol_harmonised":false,"candidate_role":"WASH_CONDITION_CONTEXT","caution":"Count-based outcomes cannot automatically be converted to mg/kg"}
+  ],
+  "external_predictive_validation_complete":false,
+  "no_external_metrics_are_claimed":true
+}

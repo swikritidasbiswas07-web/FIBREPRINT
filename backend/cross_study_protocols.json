@@ -1,0 +1,73 @@
+{
+  "version": "v0.24",
+  "research_status": "RESEARCH_ONLY_NOT_DEPLOYABLE",
+  "sources": {
+    "vassilenko_2021": {
+      "doi": "10.1371/journal.pone.0250346",
+      "role": "original_model_development_study",
+      "unit": "mg/kg",
+      "measurement_basis": "released_mass_per_kg_fabric_per_wash",
+      "laundry_device": "domestic_washing_machine",
+      "specimen_unit": "individual_fabric",
+      "outcome_granularity": "individual_wash_measurements",
+      "source_integrity": "155_of_155_workbook_cells_matched",
+      "wash_protocol_comparison": "manual_review_required",
+      "notes": "37 fabrics; 155 mass observations across five washes. Original source workbook structurally matched to extracted CSV."
+    },
+    "hazlehurst_2023": {
+      "doi": "10.1007/s11356-023-25246-8",
+      "article_url": "https://link.springer.com/article/10.1007/s11356-023-25246-8",
+      "role": "candidate_external_study",
+      "unit": "mg/kg",
+      "measurement_basis": "released_mass_per_kg_fabric_per_wash",
+      "laundry_device": "gyrowash_simulated_laundering",
+      "specimen_unit": "individual_fabric",
+      "outcome_granularity": "published_fabric_group_summary",
+      "raw_measurements_verified_accessible": false,
+      "washing_protocol": {
+        "fabric_comparison_temperature_c": 40,
+        "fabric_comparison_duration_min": 45,
+        "fabric_comparison_liquor_ratio_l_per_m2": 15,
+        "fabric_comparison_ball_bearings": 50,
+        "replicates_per_fabric": 24,
+        "replicates_exception": "PET_1: 8 replicates",
+        "uses_distilled_water_without_detergent": true,
+        "collection": "vacuum_assisted_filtration_1_6_um_glass_microfibre_filters_gravimetric",
+        "reference": "Methods and materials > Laundering tests / Fabric variables"
+      },
+      "article_data_availability": "Not applicable",
+      "protocol_compatibility": "not_established",
+      "notes": "16 commercially available fabrics. Article reports means and 95% confidence intervals, not independently verified per-replicate data. Method differs materially from domestic washing-machine trials."
+    },
+    "lant_2020": {
+      "doi": "10.1371/journal.pone.0233332",
+      "role": "context_only",
+      "unit": "mg/kg",
+      "measurement_basis": "released_mass_per_kg_mixed_wash_load",
+      "laundry_device": "domestic_washing_machine",
+      "specimen_unit": "mixed_laundry_load",
+      "outcome_granularity": "mixed_load_measurement",
+      "notes": "Mixed household wash loads are not individual textile specimen targets."
+    }
+  },
+  "published_aggregates_not_training_rows": [
+    {
+      "source_id": "hazlehurst_2023",
+      "fabric_id": "PET-VIS-ELA",
+      "mean_mg_per_kg": 180,
+      "reported_half_width_mg_per_kg": 11,
+      "half_width_type": "reported_95_percent_confidence_interval",
+      "source_locator": "Results and discussion > Influence of fabric variables, Fig. 6 text",
+      "record_type": "published_group_summary"
+    },
+    {
+      "source_id": "hazlehurst_2023",
+      "fabric_id": "PET_1",
+      "mean_mg_per_kg": 2412,
+      "reported_half_width_mg_per_kg": 222,
+      "half_width_type": "reported_95_percent_confidence_interval",
+      "source_locator": "Results and discussion > Influence of fabric variables, Fig. 6 text",
+      "record_type": "published_group_summary"
+    }
+  ]
+}
